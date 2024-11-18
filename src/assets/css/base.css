@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@font-face {
+    font-family: 'Nexa Script';
+    src: url('../fonts/nexa-script/nexa-script.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tan Tangkiewood';
+    src: url('../fonts/Pack-in/Pack in.ttf') format('opentype');
+}
+
+h1, h2, h3 {
+    font-family: 'Nexa Script', cursive;
+}
+
+p, span {
+    font-family: 'Tan Tangkiewood', sans-serif;
+}
+
+:root {
+    --color-black: #111;
+    --color-gold: #FFD700;
+    --color-bordeaux: #800020;
+    --color-indigo: #4B0082;
+
+    --text-color: #FFFFFF;
+    --bg-color: var(--color-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Tan Tangkiewood', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100%;
+}
+
+
