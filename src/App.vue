@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <FlameCursor />
     <header-comp/>
     <div class="wrapper">
       <router-view />
@@ -10,6 +11,7 @@
 <script setup>
 /* Pas de logique pour l'instant */
 import HeaderComp from "@/components/headerComp.vue";
+import FlameCursor from "@/components/FlameCursor.vue";
 </script>
 
 <style scoped>

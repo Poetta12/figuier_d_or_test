@@ -1,41 +1,76 @@
-# figuier_d_or
+# **Figuier D'Or - Maquette Test**
 
-This template should help get you started developing with Vue 3 in Vite.
+Bienvenue sur la version de test de la maquette pour **Figuier D'Or**, une boutique spécialisée dans les bougies artisanales. Cette version a été créée pour donner au client un aperçu des fonctionnalités et du design général avant le développement final.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## **Fonctionnalités incluses**
 
-## Customize configuration
+- **Page d'accueil élégante** :
+    - Carrousel présentant les produits phares avec des transitions fluides.
+    - Section "Découvrez nos collections" mettant en avant les catégories principales.
+- **Navigation fluide** :
+    - Liens clairs et réactifs vers les pages principales.
+- **Design personnalisé** :
+    - Palette de couleurs : noir, or, bordeaux, et indigo.
+    - Polices uniques : **Nexa Script** pour les titres et **Tan Tangkiewood** pour les textes.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## **Instructions pour tester la maquette**
 
-```sh
-npm install
-```
+### **Prérequis**
 
-### Compile and Hot-Reload for Development
+- Node.js (version 16 ou supérieure) doit être installé sur votre machine.
 
-```sh
-npm run dev
-```
+### **Étapes d'installation**
 
-### Compile and Minify for Production
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/Poetta12/figuier_d_or_test.git
 
-```sh
-npm run build
-```
+2. Accédez au dossier du projet :
+   ```bash
+   cd figuir-dor-maquette
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+3. Installez les dépendances :
+   ```bash
+   npm install
 
-```sh
-npm run test:unit
-```
+4. Lancez le serveur de développement :
+   ```bash
+   npm run dev
 
-### Lint with [ESLint](https://eslint.org/)
+5. Ouvrez votre navigateur et accédez à l'URL suivante :
+   ```bash
+   http://localhost:5173
 
-```sh
-npm run lint
-```
+## **Pages disponibles**
+
+- **Accueil** (`/`) : Présentation des produits et des collections.
+- **À propos** (`/about`) : Informations sur la boutique et son histoire.
+
+---
+
+## **Détails techniques**
+
+- **Framework** : Vue.js 3.
+- **Gestionnaire de dépendances** : npm.
+- **Styles** : CSS natif avec polices personnalisées.
+
+---
+
+## **Prochaines étapes**
+
+- Intégration de fonctionnalités interactives (formulaire de personnalisation, programme de fidélité, etc.).
+- Optimisation pour les appareils mobiles.
+- Préparation pour le déploiement final.
+
+---
+
+## **Contact**
+
+Pour toute question ou retour concernant cette maquette, veuillez contacter l'équipe de développement à l'adresse suivante :
+
+- **Email** : contact@poettatech.fr
+- **Téléphone** : +33 7 53 81 23 81

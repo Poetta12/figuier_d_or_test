@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Applique le curseur flamme globalement */
+html, body {
+    cursor: none;
+}
+
 /* Fonts */
 @font-face {
     font-family: 'Nexa Script';
@@ -43,5 +48,23 @@ html, body {
     color: var(--text-color);
     min-height: 100%;
 }
+
+/* En hover sur les boutons et liens */
+button:hover ~ .holder .flame,
+a:hover ~ .holder .flame {
+    height: 85px; /* Augmente la hauteur */
+    width: 20000px; /* Augmente légèrement la largeur */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+
+button:hover ~ .holder .flame:before,
+a:hover ~ .holder .flame:before {
+    box-shadow: 0 0 10px 0 rgba(247, 93, 0, 0.6), 0 -4px 3px 0 rgba(247, 128, 0, 0.8);
+}
+
+button:hover, a:hover{
+    cursor: none;
+}
+
 
 

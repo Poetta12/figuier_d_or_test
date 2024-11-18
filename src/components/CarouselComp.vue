@@ -4,9 +4,13 @@
       <img v-for="(image, index) in images" :key="index" :src="image" :alt="'Produit ' + (index + 1)" />
     </div>
 
-    <!-- Boutons de navigation -->
-    <button class="carousel-button prev" @click="prevSlide">&#10094;</button>
-    <button class="carousel-button next" @click="nextSlide">&#10095;</button>
+    <!-- Navigation par boutons -->
+    <button class="carousel-button prev" @click="prevSlide" aria-label="Slide précédent">
+      &#10094;
+    </button>
+    <button class="carousel-button next" @click="nextSlide" aria-label="Slide suivant">
+      &#10095;
+    </button>
 
     <!-- Indicateurs -->
     <div class="carousel-indicators">
@@ -24,7 +28,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
-// Images pour le carrousel
+// Liste des images pour le carrousel
 const images = [
   "/src/assets/img/candle4.jpeg",
   "/src/assets/img/candle5.jpeg",
@@ -34,11 +38,11 @@ const images = [
   "/img/candle6.jpeg",
 ];
 
-// État réactif pour le slide actuel
+// État réactif pour gérer la slide active
 const currentSlide = ref(0);
 let slideInterval = null;
 
-// Méthodes du carrousel
+// Méthodes de navigation
 const nextSlide = () => {
   currentSlide.value = (currentSlide.value + 1) % images.length;
 };
@@ -51,10 +55,11 @@ const goToSlide = (index) => {
   currentSlide.value = index;
 };
 
+// Gestion du défilement automatique
 const startSlideShow = () => {
   slideInterval = setInterval(() => {
     nextSlide();
-  }, 3000); // Change de slide toutes les 3 secondes
+  }, 5000); // Transition toutes les 5 secondes
 };
 
 const stopSlideShow = () => {
@@ -72,37 +77,55 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+/* Carrousel général */
+button:hover, a:hover{
+  cursor: none;
+}
+
 .carousel {
   position: relative;
   width: 100%;
-  max-height: 500px;
+  max-height: 400px;
   overflow: hidden;
-  margin: 0 0 1rem;
+  margin: 1rem 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-black);
 }
 
+/* Track du carrousel */
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .carousel-track img {
   width: 100%;
   height: auto;
+  object-fit: cover;
   flex-shrink: 0;
 }
 
+/* Boutons de navigation */
 .carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border: none;
-  color: white;
+  color: var(--color-indigo);
   padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 2;
   font-size: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel-button:hover {
+  background-color: var(--color-indigo);
+  color: var(--color-gold);
 }
 
 .carousel-button.prev {
@@ -113,6 +136,7 @@ onBeforeUnmount(() => {
   right: 1rem;
 }
 
+/* Indicateurs */
 .carousel-indicators {
   position: absolute;
   bottom: 1rem;
@@ -123,14 +147,36 @@ onBeforeUnmount(() => {
 }
 
 .indicator {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: rgba(50, 100, 100, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .indicator.active {
-  background-color: var(--color-indigo);
+  background-color: var(--color-gold);
+  transform: scale(1.2);
+}
+
+/* Responsive (Mobile-First) */
+
+/* Déjà optimisé pour mobile */
+
+/* Desktop */
+@media (min-width: 768px) {
+  .carousel {
+    max-height: 500px;
+  }
+
+  .carousel-button {
+    font-size: 2rem;
+  }
+
+  .indicator {
+    width: 15px;
+    height: 15px;
+  }
 }
 </style>
