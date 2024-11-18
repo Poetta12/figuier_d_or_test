@@ -30,12 +30,9 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 // Liste des images pour le carrousel
 const images = [
-  "/src/assets/img/candle4.jpeg",
-  "/src/assets/img/candle5.jpeg",
-  "/src/assets/img/candle6.jpeg",
-  "/img/candle4.jpeg",
-  "/img/candle5.jpeg",
-  "/img/candle6.jpeg",
+  "/img/candle1.jpeg",
+  "/img/candle2.jpeg",
+  "/img/candle3.jpeg",
 ];
 
 // État réactif pour gérer la slide active
