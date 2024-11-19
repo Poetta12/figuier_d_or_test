@@ -162,6 +162,11 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
+  .collections {
+    margin-top: 2rem;
+    background-color: var(--color-bg-white-tranp);
+  }
+
   .collection-list {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;

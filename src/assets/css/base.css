@@ -17,6 +17,9 @@ button:hover, a:hover{
     --color-darkgold: #d4a017;
     --color-bordeaux: #d94f4f;
     --color-indigo: #6b4fa7;
+    --color-bg-black-tranp : rgba(0, 0, 0, 0.2);
+    --color-bg-white-tranp: rgba(255, 255, 255, 0.2);
+    --img-bg-light: url("../img/christmas_candle.jpg") no-repeat center center fixed;
 
     --text-color: #111;
     --bg-color: #f7f3f0;
@@ -29,6 +32,9 @@ button:hover, a:hover{
     --color-darkgold: #bd6513;
     --color-bordeaux: #850000;
     --color-indigo: #402978;
+    --color-bg-black-tranp : rgba(255, 255, 255, 0.2);
+    --color-bg-white-tranp: rgba(0, 0, 0, 0.2);
+    --img-bg-dark: url("../img/many_candle_bg.jpg") no-repeat center center fixed;
 
     --text-color: antiquewhite;
     --bg-color: var(--color-black);
@@ -96,11 +102,23 @@ a:hover ~ .holder .flame:before {
 @media (max-width: 767px) {
     html, body {
         cursor: auto;
+        background-color: transparent;
     }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+
+    body {
+        background: var(--img-bg-light);
+        background-size: cover;
+    }
+
+    body[data-theme="dark"] {
+        background: var(--img-bg-dark);
+        background-size: cover;
+    }
+
     button, a {
         font-size: 1.5rem;
         padding: 0.8rem 2rem;

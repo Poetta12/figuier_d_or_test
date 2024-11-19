@@ -24,7 +24,7 @@
 
 .banner-content {
   max-width: 90%; /* Prend toute la largeur sur mobile */
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color-bg-white-tranp);
   width: fit-content;
   padding: 10px;
   border-radius: 20px 5px 20px 5px;

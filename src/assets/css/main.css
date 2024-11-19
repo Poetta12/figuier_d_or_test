@@ -1,3 +1,25 @@
 @import './base.css';
 
 /* Ajoute des styles globaux supplémentaires si besoin */
+
+/* Mode bureau uniquement */
+@media (min-width: 1024px) {
+    /* Background pour le mode sombre */
+    #app[data-theme="dark"] {
+        background: url("../img/many_candle_bg.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    /* Background pour le mode clair */
+    #app[data-theme="light"] {
+        background: url("../img/christmas_candle.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+
+/* Mode mobile - aucun changement de background */
+@media (max-width: 1023px) {
+    body {
+        background: none;
+    }
+}

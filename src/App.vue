@@ -19,4 +19,16 @@ import FlameCursor from "@/components/FlameCursor.vue";
   max-width: 1000px;
   margin: auto;
 }
+
+/* Mode bureau uniquement */
+@media (min-width: 1024px) {
+  body[data-theme="dark"]{
+    background: var(--img-bg-light);
+    background-size: cover;
+  }
+  body[data-theme="light"]{
+    background: var(--img-bg-light);
+    background-size: cover;
+  }
+}
 </style>

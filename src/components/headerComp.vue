@@ -4,7 +4,10 @@
       <!-- Bouton Toggle Light/Dark -->
       <button class="theme-toggle-icon" @click="toggleTheme" aria-label="Toggle Theme">
         <span class="icon">
-          <img :src="theme === 'dark' ? '/icons/bougie-eteinte.png' : '/icons/bougie-allumee.png'" alt="Theme Icon" />
+          <img
+            :src="theme === 'dark' ? '/icons/bougie-eteinte.png' : '/icons/bougie-allumee.png'"
+            alt="Figuier D'Or"
+          />
         </span>
       </button>
 
@@ -38,9 +41,16 @@
   </header>
 </template>
 
-
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+
+// Sélection de l'élément <body>
+let body;
+
+// Assurez-vous que le body est disponible après le montage du composant
+onMounted(() => {
+  body = document.body;
+});
 
 // État pour le menu mobile
 const isMenuOpen = ref(false);
@@ -54,7 +64,7 @@ const theme = ref("light");
 
 const toggleTheme = () => {
   theme.value = theme.value === "dark" ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", theme.value);
+  body.setAttribute("data-theme", theme.value);
 };
 </script>
 
@@ -70,16 +80,15 @@ const toggleTheme = () => {
 .icon::after {
   content: '';
   position: absolute;
-  bottom: -5px; /* Positionné légèrement en dessous de l'image */
+  bottom: -10px; /* Positionné légèrement en dessous de l'image */
   left: 50%;
   transform: translateX(-50%);
-  width: 80px; /* Largeur de la base */
+  width: 60px; /* Largeur de la base */
   height: 10px; /* Hauteur de la base */
   background: var(--color-darkgold);
   border-radius: 50%; /* Forme elliptique */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour ajouter de la profondeur */
 }
-
 
 button:hover,
 a:hover {
@@ -114,7 +123,6 @@ a:hover {
 .logo {
   max-width: 150px;
 }
-
 
 /* Menu Toggle (Burger pour Mobile) */
 .menu-toggle {
@@ -203,15 +211,14 @@ a:hover {
   font-family: "Sour Gummy", sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-
 }
 
-.theme-toggle-icon img{
+.theme-toggle-icon img {
   width: 60px; /* Taille ajustée */
-  height: auto; /* Taille ajustée */
+  height: auto;
 }
 
-theme-toggle-icon:hover {
+.theme-toggle-icon:hover {
   background-color: var(--color-lightgold);
   transform: scale(1.05);
 }
@@ -248,7 +255,7 @@ theme-toggle-icon:hover {
     width: fit-content;
   }
 
-  .nav-link li{
+  .nav-link li {
     display: inline-block;
     width: fit-content;
   }
