@@ -1,19 +1,19 @@
 <template>
   <header class="header">
     <div class="container">
-      <!-- Logo -->
-      <img
-        class="logo"
-        :src="theme === 'dark' ? '/logos/logo_2-removebg.png' : '/logos/logo-removebg.png'"
-        alt="Figuier D'Or"
-      />
-
       <!-- Bouton Toggle Light/Dark -->
       <button class="theme-toggle-icon" @click="toggleTheme" aria-label="Toggle Theme">
         <span class="icon">
           <img :src="theme === 'dark' ? '/icons/bougie-eteinte.png' : '/icons/bougie-allumee.png'" alt="Theme Icon" />
         </span>
       </button>
+      
+      <!-- Logo -->
+      <img
+        class="logo"
+        :src="theme === 'dark' ? '/logos/logo_2-removebg.png' : '/logos/logo-removebg.png'"
+        alt="Figuier D'Or"
+      />
 
       <!-- Navigation -->
       <nav class="nav">
@@ -61,6 +61,25 @@ const toggleTheme = () => {
 
 <style scoped>
 /* Général */
+
+.icon {
+  position: relative;
+  display: inline-block;
+}
+
+.icon::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Positionné légèrement en dessous de l'image */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* Largeur de la base */
+  height: 10px; /* Hauteur de la base */
+  background: var(--color-darkgold);
+  border-radius: 50%; /* Forme elliptique */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour ajouter de la profondeur */
+}
+
 
 button:hover,
 a:hover {

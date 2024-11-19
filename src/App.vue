@@ -5,7 +5,6 @@
     <div class="wrapper">
       <router-view />
     </div>
-    <figue-comp/>
   </div>
 </template>
 
@@ -17,7 +16,7 @@ import FlameCursor from "@/components/FlameCursor.vue";
 
 <style scoped>
 .wrapper{
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
 }
 </style>

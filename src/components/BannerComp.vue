@@ -18,7 +18,6 @@
   margin-top: 3rem;
   padding: 2rem;
   color: var(--text-color);
-  text-align: center;
   background: url("@/assets/img/B3.jpg") no-repeat center;
   background-size: cover;
   height: auto; /* S'ajuste au contenu sur mobile */
