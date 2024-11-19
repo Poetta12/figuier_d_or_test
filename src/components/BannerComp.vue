@@ -15,7 +15,6 @@
 <style scoped>
 /* Mobile-first styles */
 .banner {
-  margin-top: 3rem;
   padding: 2rem;
   color: var(--text-color);
   background: url("@/assets/img/B3.jpg") no-repeat center;
@@ -25,7 +24,10 @@
 
 .banner-content {
   max-width: 90%; /* Prend toute la largeur sur mobile */
-  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px 5px 20px 5px;
 }
 
 .banner-title {
@@ -57,7 +59,6 @@
 /* Desktop styles */
 @media (min-width: 768px) {
   .banner {
-    margin-top: 5vh;
     height: 400px;
   }
 

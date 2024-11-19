@@ -10,8 +10,9 @@
         <div class="collection-content">
           <h3 class="collection-title">{{ collection.title }}</h3>
           <p class="collection-description">{{ collection.description }}</p>
-          <button class="explore-button">Explorer la boutique</button>
+
         </div>
+        <button class="explore-button">Explorer la boutique</button>
       </div>
     </div>
   </section>
@@ -24,25 +25,25 @@ const collections = [
     id: 1,
     title: "Bougies moulées",
     description: "Des formes élégantes et uniques.",
-    image: "src/assets/img/moule-bougie-originale.webp",
+    image: "/img/moule-bougie-originale.webp",
   },
   {
     id: 2,
     title: "Bougies parfumées",
     description: "Des belles senteurs envoûtantes.",
-    image: "src/assets/img/bougie-parfumée.png",
+    image: "/img/bougie-parfumée.png",
   },
   {
     id: 3,
     title: "Bougies Fondantes",
     description: "Des parfums pour chaque humeur.",
-    image: "src/assets/img/bougie-fondant.webp",
+    image: "/img/bougie-fondant.webp",
   },
   {
     id: 4,
     title: "Bougies de massage",
-    description: "Relaxez-vous avec style.",
-    image: "src/assets/img/Massage-bougie.jpeg",
+    description: "Relaxez-vous tranquillement avec style.",
+    image: "/img/Massage-bougie.jpeg",
   },
 ];
 </script>
@@ -87,6 +88,7 @@ a:hover {
   max-width: 300px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   box-shadow: 0 4px 6px var(--color-darkgold);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -162,11 +164,14 @@ a:hover {
 @media (min-width: 1024px) {
   .collection-list {
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .collection-item {
     width: 100%;
+  }
+  .collection-content{
+    padding: 0 10px;
   }
 }
 </style>

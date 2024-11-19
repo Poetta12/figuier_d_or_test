@@ -7,7 +7,7 @@
           <img :src="theme === 'dark' ? '/icons/bougie-eteinte.png' : '/icons/bougie-allumee.png'" alt="Theme Icon" />
         </span>
       </button>
-      
+
       <!-- Logo -->
       <img
         class="logo"
