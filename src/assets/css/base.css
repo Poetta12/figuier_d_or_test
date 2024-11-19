@@ -9,7 +9,9 @@ html, body {
 button:hover, a:hover{
     cursor: none;
 }
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Sour+Gummy&display=swap');
 
+/* Mode par défaut : dark-mode */
 :root {
     --color-black: #111;
     --color-lightgold: #f4b52b;
@@ -22,7 +24,7 @@ button:hover, a:hover{
 }
 
 /* Light mode variables */
-.light-mode {
+[data-theme="light"] {
     --color-black: #f9f9f9;
     --color-lightgold: #ffcc00;
     --color-darkgold: #d4a017;
@@ -30,13 +32,15 @@ button:hover, a:hover{
     --color-indigo: #6b4fa7;
 
     --text-color: #111;
-    --bg-color: var(--color-black);
+    --bg-color: #ffffff;
 }
 
+/* Applique une transition fluide à tous les éléments */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html, body {
@@ -44,7 +48,6 @@ html, body {
     background-color: var(--bg-color);
     color: var(--text-color);
     min-height: 100%;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Fonts */
@@ -61,7 +64,6 @@ button, a {
     font-family: 'Sour Gummy', sans-serif;
     font-size: 1rem;
     padding: 0.5rem 1rem;
-
     color: var(--text-color);
     border: none;
     border-radius: 5px;
@@ -97,8 +99,6 @@ a:hover ~ .holder .flame:before {
         cursor: auto;
     }
 }
-
-/* Responsive styles */
 
 /* Desktop */
 @media (min-width: 1024px) {

@@ -2,8 +2,11 @@
   <header class="header">
     <div class="container">
       <!-- Logo -->
-      <img class="logo" src="/logos/logo_2-removebg.png" alt="Figuier D'Or" />
-
+      <img
+        class="logo"
+        :src="theme === 'light' ? '/logos/logo-removebg.png' : '/logos/logo_2-removebg.png'"
+        alt="Figuier D'Or"
+      />
 
       <!-- Bouton Toggle Light/Dark -->
       <button class="theme-toggle" @click="toggleTheme">
@@ -48,11 +51,40 @@ const theme = ref("dark");
 
 const toggleTheme = () => {
   theme.value = theme.value === "light" ? "dark" : "light";
-  document.body.classList.toggle("light-mode", theme.value === "light");
+  document.documentElement.setAttribute("data-theme", theme.value);
 };
 </script>
 
+
 <style scoped>
+/* Général */
+:root {
+  --color-black: #111;
+  --color-lightgold: #f4b52b;
+  --color-darkgold: #bd6513;
+  --color-bordeaux: #850000;
+  --color-indigo: #402978;
+
+  --text-color: antiquewhite;
+  --bg-color: var(--color-black);
+}
+
+[data-theme="light"] {
+  --color-black: #f9f9f9;
+  --color-lightgold: #ffcc00;
+  --color-darkgold: #d4a017;
+  --color-bordeaux: #d94f4f;
+  --color-indigo: #6b4fa7;
+
+  --text-color: #111;
+  --bg-color: #ffffff;
+}
+
+button:hover,
+a:hover {
+  cursor: none;
+}
+
 /* Styles globaux */
 .header {
   background-color: var(--bg-color);
