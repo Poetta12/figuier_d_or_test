@@ -3,26 +3,55 @@
     <h2 class="section-title">Découvrez nos collections</h2>
     <div class="collection-list">
       <div class="collection-item" v-for="collection in collections" :key="collection.id">
-        <h3 class="collection-title">{{ collection.title }}</h3>
-        <p class="collection-description">{{ collection.description }}</p>
-        <button class="explore-button">Explorer la boutique</button>
+        <div
+          class="collection-image"
+          :style="{ backgroundImage: `url(${collection.image})` }"
+        ></div>
+        <div class="collection-content">
+          <h3 class="collection-title">{{ collection.title }}</h3>
+          <p class="collection-description">{{ collection.description }}</p>
+          <button class="explore-button">Explorer la boutique</button>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
+
 <script setup>
 const collections = [
-  { id: 1, title: "Bougies moulées", description: "Des formes élégantes et uniques." },
-  { id: 2, title: "Bougies parfumées", description: "Des senteurs envoûtantes." },
-  { id: 3, title: "Bougies Fondants", description: "Des parfums pour chaque humeur." },
-  { id: 4, title: "Bougies de massage", description: "Relaxez-vous avec style." },
+  {
+    id: 1,
+    title: "Bougies moulées",
+    description: "Des formes élégantes et uniques.",
+    image: "src/assets/img/moule-bougie-originale.webp",
+  },
+  {
+    id: 2,
+    title: "Bougies parfumées",
+    description: "Des belles senteurs envoûtantes.",
+    image: "src/assets/img/bougie-parfumée.png",
+  },
+  {
+    id: 3,
+    title: "Bougies Fondantes",
+    description: "Des parfums pour chaque humeur.",
+    image: "src/assets/img/bougie-fondant.webp",
+  },
+  {
+    id: 4,
+    title: "Bougies de massage",
+    description: "Relaxez-vous avec style.",
+    image: "src/assets/img/Massage-bougie.jpeg",
+  },
 ];
 </script>
 
+
 <style scoped>
 /* Section générale */
-button:hover, a:hover {
+button:hover,
+a:hover {
   cursor: none;
 }
 
@@ -38,6 +67,7 @@ button:hover, a:hover {
   font-size: 2rem;
   color: var(--color-lightgold);
   margin-bottom: 1.5rem;
+  text-shadow: 2px 2px var(--color-black);
 }
 
 /* Liste des collections */
@@ -51,16 +81,14 @@ button:hover, a:hover {
 /* Éléments des collections */
 .collection-item {
   background-color: var(--color-indigo);
-  color: var(--text-color);
-  padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 4px 6px var(--color-darkgold);
+  overflow: hidden;
   width: 90%;
   max-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align: center;
+  box-shadow: 0 4px 6px var(--color-darkgold);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -69,7 +97,27 @@ button:hover, a:hover {
   box-shadow: 0 6px 10px var(--color-lightgold);
 }
 
-/* Titre de collection */
+/* Image d'arrière-plan */
+.collection-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0 0;
+}
+
+/* Contenu de la collection */
+.collection-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-indigo);
+  color: var(--text-color);
+}
+
+.collection-content:last-child{
+  justify-self: flex-end;
+}
+
 .collection-title {
   font-family: "Rubik Iso", cursive;
   font-size: 1.5rem;

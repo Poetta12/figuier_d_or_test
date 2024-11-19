@@ -9,8 +9,10 @@
       />
 
       <!-- Bouton Toggle Light/Dark -->
-      <button class="theme-toggle" @click="toggleTheme">
-        {{ theme === 'dark' ? 'Mode clair' : 'Mode sombre' }}
+      <button class="theme-toggle-icon" @click="toggleTheme" aria-label="Toggle Theme">
+        <span class="icon">
+          <img :src="theme === 'dark' ? '/icons/bougie-eteinte.png' : '/icons/bougie-allumee.png'" alt="Theme Icon" />
+        </span>
       </button>
 
       <!-- Navigation -->
@@ -36,6 +38,7 @@
   </header>
 </template>
 
+
 <script setup>
 import { ref } from "vue";
 
@@ -54,6 +57,7 @@ const toggleTheme = () => {
   document.documentElement.setAttribute("data-theme", theme.value);
 };
 </script>
+
 
 <style scoped>
 /* Général */
@@ -92,6 +96,7 @@ a:hover {
   max-width: 150px;
 }
 
+
 /* Menu Toggle (Burger pour Mobile) */
 .menu-toggle {
   background: none;
@@ -126,6 +131,7 @@ a:hover {
 /* Navigation (Mobile) */
 .nav {
   position: relative;
+  align-self: flex-end;
 }
 
 .nav-list {
@@ -138,8 +144,8 @@ a:hover {
   border: 1px solid var(--color-lightgold);
   border-radius: 8px;
   position: absolute;
-  top: 100%;
-  right: 0;
+  top: 0;
+  right: -10px;
   width: 230%;
   transform: translateY(-200%);
   transition: transform 0.3s ease-in-out;
@@ -147,7 +153,7 @@ a:hover {
 }
 
 .nav-list.open {
-  transform: translateY(0);
+  transform: translateY(80%);
 }
 
 .nav-link {
@@ -170,18 +176,23 @@ a:hover {
 }
 
 /* Bouton Toggle Light/Dark */
-.theme-toggle {
-  background-color: var(--color-indigo);
-  color: var(--text-color);
+.theme-toggle-icon {
+  background-color: transparent;
   border: none;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 0;
   font-family: "Sour Gummy", sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+
 }
 
-.theme-toggle:hover {
+.theme-toggle-icon img{
+  width: 60px; /* Taille ajustée */
+  height: auto; /* Taille ajustée */
+}
+
+theme-toggle-icon:hover {
   background-color: var(--color-lightgold);
   transform: scale(1.05);
 }

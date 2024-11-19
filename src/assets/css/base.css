@@ -12,14 +12,14 @@ button:hover, a:hover{
 
 /* Mode par défaut : light-mode */
 :root {
-    --color-black: #f9f9f9;
+    --color-black: #111;
     --color-lightgold: #ffcc00;
     --color-darkgold: #d4a017;
     --color-bordeaux: #d94f4f;
     --color-indigo: #6b4fa7;
 
     --text-color: #111;
-    --bg-color: #ffffff;
+    --bg-color: #f7f3f0;
 }
 
 /* Light mode variables */
