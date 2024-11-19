@@ -36,11 +36,7 @@ button:hover, a:hover {
 .section-title {
   font-family: "Rubik Iso", cursive;
   font-size: 2rem;
-<<<<<<< HEAD
-  color: var(--color-light-gold); /* Light gold */
-=======
   color: var(--color-lightgold);
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
   margin-bottom: 1.5rem;
 }
 
@@ -78,12 +74,8 @@ button:hover, a:hover {
   font-family: "Rubik Iso", cursive;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-<<<<<<< HEAD
-  color: var(--color-light-gold); /* Light gold */
-=======
   color: var(--color-lightgold);
   text-shadow: 0 2px 4px var(--color-darkgold);
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
 }
 
 .collection-description {
@@ -94,11 +86,7 @@ button:hover, a:hover {
 
 /* Bouton Explorer */
 .explore-button {
-<<<<<<< HEAD
-  background-color: var(--color-dark-gold); /* Dark gold */
-=======
   background-color: var(--color-lightgold);
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
   color: var(--color-bordeaux);
   border: none;
   border-radius: 5px;
@@ -111,12 +99,8 @@ button:hover, a:hover {
 
 .explore-button:hover {
   background-color: var(--color-bordeaux);
-<<<<<<< HEAD
-  color: var(--color-light-gold); /* Light gold */
-=======
   color: var(--color-lightgold);
   transform: scale(1.1);
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
 }
 
 /* Grille pour tablettes et desktops */

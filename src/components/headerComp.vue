@@ -1,9 +1,6 @@
 <template>
   <header class="header">
     <div class="container">
-<<<<<<< HEAD
-      <img class="logo" src="/logos/logo_2-removebg.png" alt="Figuier D'Or">
-=======
       <!-- Logo -->
       <img
         class="logo"
@@ -17,7 +14,6 @@
       </button>
 
       <!-- Navigation -->
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
       <nav class="nav">
         <!-- Menu burger pour mobile -->
         <button class="menu-toggle" @click="toggleMenu" aria-label="Toggle Menu">
@@ -59,34 +55,8 @@ const toggleTheme = () => {
 };
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-/* Styles globaux pour le header */
-=======
-
 <style scoped>
 /* Général */
-:root {
-  --color-black: #111;
-  --color-lightgold: #f4b52b;
-  --color-darkgold: #bd6513;
-  --color-bordeaux: #850000;
-  --color-indigo: #402978;
-
-  --text-color: antiquewhite;
-  --bg-color: var(--color-black);
-}
-
-[data-theme="light"] {
-  --color-black: #f9f9f9;
-  --color-lightgold: #ffcc00;
-  --color-darkgold: #d4a017;
-  --color-bordeaux: #d94f4f;
-  --color-indigo: #6b4fa7;
-
-  --text-color: #111;
-  --bg-color: #ffffff;
-}
 
 button:hover,
 a:hover {
@@ -94,7 +64,7 @@ a:hover {
 }
 
 /* Styles globaux */
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
+
 .header {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -105,12 +75,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 10;
-<<<<<<< HEAD
-  border-bottom: 1px solid var(--color-dark-gold); /* Dark gold */
-=======
   border-bottom: 2px solid var(--color-lightgold);
   box-shadow: 0 4px 6px var(--color-darkgold);
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
 }
 
 /* Container */
@@ -140,11 +106,7 @@ a:hover {
 .menu-toggle span {
   width: 30px;
   height: 3px;
-<<<<<<< HEAD
-  background-color: var(--color-light-gold); /* Light gold */
-=======
   background-color: var(--color-lightgold);
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -189,14 +151,8 @@ a:hover {
 }
 
 .nav-link {
-<<<<<<< HEAD
-  font-family: "Tan Tangkiewood", serif;
-  font-size: 1.2rem;
-  color: var(--color-light-gold); /* Light gold */
-=======
   font-size: 1rem;
   color: var(--color-lightgold);
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
   text-decoration: none;
   margin: 0.5rem 0;
   transition: color 0.3s ease;
@@ -209,12 +165,8 @@ a:hover {
 }
 
 .nav-link:hover {
-<<<<<<< HEAD
-  color: var(--color-dark-gold); /* Dark gold on hover */
-=======
   color: var(--color-bordeaux);
   text-shadow: 0 1px 5px var(--color-lightgold);
->>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
 }
 
 /* Bouton Toggle Light/Dark */
