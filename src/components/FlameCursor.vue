@@ -6,11 +6,16 @@
       :class="{ 'is-hovering': isHovering }"
       :style="{ top: cursorY + 'px', left: cursorX + 'px' }"
     >
-      <div class="candle">
+      <!-- La figue remplace la bougie -->
+      <div class="figue">
         <div class="blinking-glow"></div>
         <div class="thread"></div>
-        <div class="glow"></div>
-        <div class="flame"></div>
+        <div
+          class="flame"
+          :style="{
+            transform: `translateX(-50%) rotate(${flameTilt}deg) skew(${flameCurve}deg, ${flameCurve}deg)`
+          }"
+        ></div>
       </div>
     </div>
   </div>
@@ -22,12 +27,51 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 // Variables pour la position du curseur et état de hover
 const cursorX = ref(0);
 const cursorY = ref(0);
+const flameTilt = ref(0); // Inclinaison de la flamme
+const flameCurve = ref(0); // Courbure de la flamme
+const previousX = ref(null); // Stocke la position X précédente
 const isHovering = ref(false);
 
-// Mise à jour de la position du curseur
+// Remettre la flamme à la position neutre après un délai
+let idleTimeout = null;
+
+const resetFlame = () => {
+  flameTilt.value = 0;
+  flameCurve.value = 0;
+};
+
+// Mise à jour de la position du curseur et calcul de l'inclinaison
 const updateCursor = (event) => {
-  cursorX.value = event.clientX;
+  const currentX = event.clientX;
+
+  cursorX.value = currentX;
   cursorY.value = event.clientY + 50;
+
+  // Effacer tout timeout précédent
+  if (idleTimeout) clearTimeout(idleTimeout);
+
+  // Calculer l'inclinaison et la courbure
+  if (previousX.value !== null) {
+    const deltaX = currentX - previousX.value;
+
+    // Ajuster l'inclinaison et la courbure en fonction du déplacement
+    if (deltaX > 0) {
+      flameTilt.value = -35; // Penché vers la gauche
+      flameCurve.value = -8; // Courbé vers la gauche
+    } else if (deltaX < 0) {
+      flameTilt.value = 35; // Penché vers la droite
+      flameCurve.value = 8; // Courbé vers la droite
+    } else {
+      flameTilt.value = 0; // Pas de mouvement
+      flameCurve.value = 0; // Pas de courbure
+    }
+  }
+
+  // Remettre à neutre après un délai d'inactivité
+  idleTimeout = setTimeout(resetFlame, 50);
+
+  // Mettre à jour la position précédente
+  previousX.value = currentX;
 };
 
 // Activer/désactiver l'état de hover
@@ -62,148 +106,104 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-/* Conteneur principal */
-.holder {
-  position: fixed;
-  width: 25px;
-  height: 80px;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-}
 
-/* Corps de la bougie */
-.candle {
-  position: relative;
-  width: 25px;
-  height: 50px;
-  border-radius: 30px / 10px;
-  background: linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
-  box-shadow: inset 5px -8px 10px 0 rgba(0, 0, 0, 0.4), inset -5px 0 10px 0 rgba(0, 0, 0, 0.4);
-}
-
-.candle:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 8px;
-  border-radius: 50%;
-  border: 1px solid #d47401;
-  background: radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
-}
-
-.candle:after {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  top: 5px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-  background: radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
-}
-
-/* Mèche */
-.thread {
-  position: absolute;
-  width: 1px;
-  height: 8px;
-  top: -5px;
-  left: 50%;
-  z-index: 1;
-  border-radius: 40% 40% 0 0;
-  transform: translateX(-50%);
-  background: linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
-}
-
-/* Flamme */
-.flame {
-  position: absolute;
-  width: 8px;
-  height: 30px;
-  left: 50%;
-  transform-origin: 50% 100%;
-  transform: translateX(-50%);
-  bottom: 100%;
-  border-radius: 50% 50% 20% 20%;
-  background: linear-gradient(white 80%, transparent);
-  animation: moveFlame 3s linear infinite, enlargeFlame 2s linear infinite;
-  transition: all 0.3s ease;
-}
-
-.flame:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50% 50% 20% 20%;
-  box-shadow: 0 0 7px 0 rgba(247, 93, 0, 0.4), 0 -3px 2px 0 rgba(247, 128, 0, 0.7);
-  transition: all 0.3s ease;
-}
-
-/* Flamme agrandie en hover */
-.is-hovering .flame {
-  height: 45px;
-  width: 10px;
-}
-
-.is-hovering .flame:before {
-  box-shadow: 0 0 15px 0 rgba(247, 93, 0, 0.7), 0 -5px 4px 0 rgba(247, 128, 0, 0.9);
-}
-
-/* Animations */
-@keyframes moveFlame {
-  0%,
-  100% {
-    transform: translateX(-50%) rotate(-2deg);
+@media (min-width: 1024px) {
+  /* Conteneur principal */
+  .holder {
+    position: fixed;
+    width: 25px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
   }
-  50% {
-    transform: translateX(-50%) rotate(2deg);
-  }
-}
 
-@keyframes enlargeFlame {
-  0%,
-  100% {
+  /* Corps de la figue */
+  .figue {
+    position: relative;
+    width: 40px;
+    height: 50px;
+    background: url('/src/assets/figue.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  /* Mèche */
+  .thread {
+    position: absolute;
+    width: 1px;
+    height: 8px;
+    top: -5px;
+    left: 50%;
+    z-index: 1;
+    border-radius: 40% 40% 0 0;
+    transform: translateX(-50%);
+    background: linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
+  }
+
+  /* Flamme avec inclinaison et courbure */
+  .flame {
+    position: absolute;
+    width: 8px;
+    height: 25px;
+    left: 50%;
+    transform-origin: 50% 100%;
+    bottom: 100%;
+    border-radius: 50% 50% 20% 20%;
+    background: linear-gradient(white 80%, transparent);
+    animation: enlargeFlame 2s linear infinite;
+    /* Transition fluide pour les transformations */
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+
+  .flame:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 20% 20%;
+    box-shadow: 0 0 5px 0 rgba(247, 93, 0, 0.4), 0 -2px 1px 0 rgba(247, 128, 0, 0.7);
+  }
+
+  /* Flamme agrandie en hover */
+  .is-hovering .flame {
     height: 30px;
+    width: 10px;
   }
-  50% {
-    height: 35px;
-  }
-}
 
-/* Lueur autour de la flamme */
-.blinking-glow {
-  position: absolute;
-  width: 25px;
-  height: 50px;
-  left: 50%;
-  top: -50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background: #ff6000;
-  filter: blur(15px);
-  animation: blinkIt 0.1s infinite;
+  .is-hovering .flame:before {
+    box-shadow: 0 0 10px 0 rgba(247, 93, 0, 0.7), 0 -3px 2px 0 rgba(247, 128, 0, 0.9);
+  }
+
+  /* Animations */
+  @keyframes enlargeFlame {
+    0%,
+    100% {
+      height: 25px;
+    }
+    50% {
+      height: 28px;
+    }
+  }
+
+  /* Lueur autour de la flamme */
+  .blinking-glow {
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    left: 50%;
+    top: -50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: #ff6000;
+    filter: blur(12px); /* Réduction du flou */
+    animation: blinkIt 0.1s infinite;
+  }
 }
 
 @keyframes blinkIt {
   50% {
     opacity: 0.8;
   }
-}
-
-/* Lueur interne */
-.glow {
-  position: absolute;
-  width: 6px;
-  height: 15px;
-  border-radius: 50% 50% 35% 35%;
-  left: 50%;
-  top: -12px;
-  transform: translateX(-50%);
-  background: rgba(0, 133, 255, 0.7);
-  box-shadow: 0 -10px 7px 0 #dc8a0c, 0 10px 15px 0 #dc8a0c, inset 1px 0 1px 0 rgba(0, 133, 255, 0.6), inset -1px 0 1px 0 rgba(0, 133, 255, 0.6);
 }
 </style>

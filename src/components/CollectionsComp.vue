@@ -15,7 +15,7 @@
 const collections = [
   { id: 1, title: "Bougies moulées", description: "Des formes élégantes et uniques." },
   { id: 2, title: "Bougies parfumées", description: "Des senteurs envoûtantes." },
-  { id: 3, title: "Fondants", description: "Des parfums pour chaque humeur." },
+  { id: 3, title: "Bougies Fondants", description: "Des parfums pour chaque humeur." },
   { id: 4, title: "Bougies de massage", description: "Relaxez-vous avec style." },
 ];
 </script>
@@ -34,9 +34,13 @@ button:hover, a:hover {
 }
 
 .section-title {
-  font-family: "Nexa Script", cursive;
+  font-family: "Rubik Iso", cursive;
   font-size: 2rem;
+<<<<<<< HEAD
   color: var(--color-light-gold); /* Light gold */
+=======
+  color: var(--color-lightgold);
+>>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
   margin-bottom: 1.5rem;
 }
 
@@ -54,7 +58,7 @@ button:hover, a:hover {
   color: var(--text-color);
   padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--color-darkgold);
   width: 90%;
   max-width: 300px;
   display: flex;
@@ -66,39 +70,53 @@ button:hover, a:hover {
 
 .collection-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 10px var(--color-lightgold);
 }
 
 /* Titre de collection */
 .collection-title {
-  font-family: "Nexa Script", cursive;
+  font-family: "Rubik Iso", cursive;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+<<<<<<< HEAD
   color: var(--color-light-gold); /* Light gold */
+=======
+  color: var(--color-lightgold);
+  text-shadow: 0 2px 4px var(--color-darkgold);
+>>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
 }
 
 .collection-description {
-  font-family: "Tan Tangkiewood", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 /* Bouton Explorer */
 .explore-button {
+<<<<<<< HEAD
   background-color: var(--color-dark-gold); /* Dark gold */
+=======
+  background-color: var(--color-lightgold);
+>>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
   color: var(--color-bordeaux);
   border: none;
   border-radius: 5px;
   padding: 0.7rem 1rem;
   cursor: pointer;
-  font-family: "Tan Tangkiewood", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .explore-button:hover {
   background-color: var(--color-bordeaux);
+<<<<<<< HEAD
   color: var(--color-light-gold); /* Light gold */
+=======
+  color: var(--color-lightgold);
+  transform: scale(1.1);
+>>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
 }
 
 /* Grille pour tablettes et desktops */

@@ -75,10 +75,13 @@ onBeforeUnmount(() => {
 
 <style scoped>
 /* Carrousel général */
+<<<<<<< HEAD
 button:hover, a:hover {
   cursor: none;
 }
 
+=======
+>>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
 .carousel {
   position: relative;
   width: 100%;
@@ -86,7 +89,7 @@ button:hover, a:hover {
   overflow: hidden;
   margin: 1rem 0;
   border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 15px var(--color-darkgold);
   background-color: var(--color-black);
 }
 
@@ -108,9 +111,15 @@ button:hover, a:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+<<<<<<< HEAD
   background-color: var(--color-light-gold); /* Light gold */
   border: none;
   color: var(--color-indigo);
+=======
+  background-color: var(--color-darkgold);
+  border: 2px solid var(--color-lightgold);
+  color: var(--color-lightgold);
+>>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
   padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 2;
@@ -121,8 +130,13 @@ button:hover, a:hover {
 }
 
 .carousel-button:hover {
+<<<<<<< HEAD
   background-color: var(--color-dark-gold); /* Dark gold on hover */
   color: var(--color-indigo);
+=======
+  background-color: var(--color-lightgold);
+  color: var(--text-color);
+>>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
 }
 
 .carousel-button.prev {
@@ -153,10 +167,19 @@ button:hover, a:hover {
 }
 
 .indicator.active {
+<<<<<<< HEAD
   background-color: var(--color-light-gold); /* Active state with light gold */
   transform: scale(1.2);
 }
 
+=======
+  background-color: var(--color-lightgold);
+  transform: scale(1.2);
+}
+
+/* Responsive (Mobile-First) */
+
+>>>>>>> a035d82bd60eec956ffa02b9261713ff7d8be08f
 /* Desktop */
 @media (min-width: 768px) {
   .carousel {
