@@ -6,10 +6,10 @@
       :class="{ 'is-hovering': isHovering }"
       :style="{ top: cursorY + 'px', left: cursorX + 'px' }"
     >
-      <div class="candle">
+      <!-- La figue remplace la bougie -->
+      <div class="figue">
         <div class="blinking-glow"></div>
         <div class="thread"></div>
-        <div class="glow"></div>
         <div class="flame"></div>
       </div>
     </div>
@@ -72,37 +72,13 @@ onBeforeUnmount(() => {
   z-index: 9999;
 }
 
-/* Corps de la bougie */
-.candle {
+/* Corps de la figue */
+.figue {
   position: relative;
-  width: 25px;
+  width: 40px;
   height: 50px;
-  border-radius: 30px / 10px;
-  background: linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
-  box-shadow: inset 5px -8px 10px 0 rgba(0, 0, 0, 0.4), inset -5px 0 10px 0 rgba(0, 0, 0, 0.4);
-}
-
-.candle:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 8px;
-  border-radius: 50%;
-  border: 1px solid #d47401;
-  background: radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
-}
-
-.candle:after {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  top: 5px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-  background: radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
+  background: url('/src/assets/figue.png') no-repeat center center;
+  background-size: cover;
 }
 
 /* Mèche */
@@ -118,11 +94,11 @@ onBeforeUnmount(() => {
   background: linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
 }
 
-/* Flamme */
+/* Flamme réduite */
 .flame {
   position: absolute;
-  width: 8px;
-  height: 30px;
+  width: 8px; /* Réduit légèrement la largeur */
+  height: 15px; /* Réduit légèrement la hauteur */
   left: 50%;
   transform-origin: 50% 100%;
   transform: translateX(-50%);
@@ -139,18 +115,18 @@ onBeforeUnmount(() => {
   width: 100%;
   height: 100%;
   border-radius: 50% 50% 20% 20%;
-  box-shadow: 0 0 7px 0 rgba(247, 93, 0, 0.4), 0 -3px 2px 0 rgba(247, 128, 0, 0.7);
+  box-shadow: 0 0 5px 0 rgba(247, 93, 0, 0.4), 0 -2px 1px 0 rgba(247, 128, 0, 0.7);
   transition: all 0.3s ease;
 }
 
 /* Flamme agrandie en hover */
 .is-hovering .flame {
-  height: 45px;
-  width: 10px;
+  height: 50px; /* Ajuste la taille agrandie */
+  width: 10px; /* Ajuste la largeur agrandie */
 }
 
 .is-hovering .flame:before {
-  box-shadow: 0 0 15px 0 rgba(247, 93, 0, 0.7), 0 -5px 4px 0 rgba(247, 128, 0, 0.9);
+  box-shadow: 0 0 10px 0 rgba(247, 93, 0, 0.7), 0 -3px 2px 0 rgba(247, 128, 0, 0.9);
 }
 
 /* Animations */
@@ -167,10 +143,10 @@ onBeforeUnmount(() => {
 @keyframes enlargeFlame {
   0%,
   100% {
-    height: 30px;
+    height: 25px;
   }
   50% {
-    height: 35px;
+    height: 28px;
   }
 }
 
@@ -184,7 +160,7 @@ onBeforeUnmount(() => {
   transform: translateX(-50%);
   border-radius: 50%;
   background: #ff6000;
-  filter: blur(15px);
+  filter: blur(12px); /* Réduction du flou */
   animation: blinkIt 0.1s infinite;
 }
 
@@ -192,18 +168,5 @@ onBeforeUnmount(() => {
   50% {
     opacity: 0.8;
   }
-}
-
-/* Lueur interne */
-.glow {
-  position: absolute;
-  width: 6px;
-  height: 15px;
-  border-radius: 50% 50% 35% 35%;
-  left: 50%;
-  top: -12px;
-  transform: translateX(-50%);
-  background: rgba(0, 133, 255, 0.7);
-  box-shadow: 0 -10px 7px 0 #dc8a0c, 0 10px 15px 0 #dc8a0c, inset 1px 0 1px 0 rgba(0, 133, 255, 0.6), inset -1px 0 1px 0 rgba(0, 133, 255, 0.6);
 }
 </style>

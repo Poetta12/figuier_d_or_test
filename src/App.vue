@@ -12,6 +12,7 @@
 /* Pas de logique pour l'instant */
 import HeaderComp from "@/components/headerComp.vue";
 import FlameCursor from "@/components/FlameCursor.vue";
+import FigueComp from "@/components/FigueComp.vue";
 </script>
 
 <style scoped>
