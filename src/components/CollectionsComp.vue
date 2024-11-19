@@ -22,7 +22,7 @@ const collections = [
 
 <style scoped>
 /* Section générale */
-button:hover, a:hover{
+button:hover, a:hover {
   cursor: none;
 }
 
@@ -36,7 +36,7 @@ button:hover, a:hover{
 .section-title {
   font-family: "Nexa Script", cursive;
   font-size: 2rem;
-  color: var(--color-gold);
+  color: var(--color-light-gold); /* Light gold */
   margin-bottom: 1.5rem;
 }
 
@@ -69,10 +69,12 @@ button:hover, a:hover{
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Titre de collection */
 .collection-title {
   font-family: "Nexa Script", cursive;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--color-light-gold); /* Light gold */
 }
 
 .collection-description {
@@ -83,7 +85,7 @@ button:hover, a:hover{
 
 /* Bouton Explorer */
 .explore-button {
-  background-color: var(--color-gold);
+  background-color: var(--color-dark-gold); /* Dark gold */
   color: var(--color-bordeaux);
   border: none;
   border-radius: 5px;
@@ -96,7 +98,7 @@ button:hover, a:hover{
 
 .explore-button:hover {
   background-color: var(--color-bordeaux);
-  color: var(--color-gold);
+  color: var(--color-light-gold); /* Light gold */
 }
 
 /* Grille pour tablettes et desktops */

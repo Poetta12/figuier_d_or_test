@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container">
-      <img class="logo" src="/logos/logo-removebg.png" alt="Figuier D'Or">
+      <img class="logo" src="/logos/logo_2-removebg.png" alt="Figuier D'Or">
       <nav class="nav">
         <button class="menu-toggle" @click="toggleMenu">
           <span :class="{ open: isMenuOpen }"></span>
@@ -30,17 +30,6 @@ const toggleMenu = () => {
 </script>
 
 <style scoped>
-/* Palette principale */
-:root {
-  --color-black: #000000;
-  --color-gold: #FFD700;
-  --color-bordeaux: #800020;
-  --color-indigo: #4B0082;
-
-  --text-color: #FFFFFF;
-  --bg-color: var(--color-black);
-}
-
 /* Styles globaux pour le header */
 .header {
   background-color: var(--bg-color);
@@ -52,7 +41,7 @@ const toggleMenu = () => {
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid var(--color-gold);
+  border-bottom: 1px solid var(--color-dark-gold); /* Dark gold */
 }
 
 .container {
@@ -82,7 +71,7 @@ const toggleMenu = () => {
 .menu-toggle span {
   width: 30px;
   height: 3px;
-  background-color: var(--color-gold);
+  background-color: var(--color-light-gold); /* Light gold */
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -126,7 +115,7 @@ const toggleMenu = () => {
 .nav-link {
   font-family: "Tan Tangkiewood", serif;
   font-size: 1.2rem;
-  color: var(--color-gold);
+  color: var(--color-light-gold); /* Light gold */
   text-decoration: none;
   margin: 0.5rem 0;
   transition: color 0.3s ease;
@@ -139,7 +128,7 @@ const toggleMenu = () => {
 }
 
 .nav-link:hover {
-  color: var(--color-bordeaux);
+  color: var(--color-dark-gold); /* Dark gold on hover */
 }
 
 /* Desktop View */

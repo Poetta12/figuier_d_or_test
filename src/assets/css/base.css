@@ -28,9 +28,10 @@ p, span {
 
 :root {
     --color-black: #111;
-    --color-gold: #FFD700;
-    --color-bordeaux: #800020;
-    --color-indigo: #4B0082;
+    --color-light-gold: #f4b52b;
+    --color-dark-gold: #bd6513;
+    --color-bordeaux: #850000;
+    --color-indigo: #402978;
 
     --text-color: #FFFFFF;
     --bg-color: var(--color-black);

@@ -75,7 +75,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 /* Carrousel général */
-button:hover, a:hover{
+button:hover, a:hover {
   cursor: none;
 }
 
@@ -108,7 +108,7 @@ button:hover, a:hover{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-light-gold); /* Light gold */
   border: none;
   color: var(--color-indigo);
   padding: 0.5rem 1rem;
@@ -121,8 +121,8 @@ button:hover, a:hover{
 }
 
 .carousel-button:hover {
-  background-color: var(--color-indigo);
-  color: var(--color-gold);
+  background-color: var(--color-dark-gold); /* Dark gold on hover */
+  color: var(--color-indigo);
 }
 
 .carousel-button.prev {
@@ -153,13 +153,9 @@ button:hover, a:hover{
 }
 
 .indicator.active {
-  background-color: var(--color-gold);
+  background-color: var(--color-light-gold); /* Active state with light gold */
   transform: scale(1.2);
 }
-
-/* Responsive (Mobile-First) */
-
-/* Déjà optimisé pour mobile */
 
 /* Desktop */
 @media (min-width: 768px) {
