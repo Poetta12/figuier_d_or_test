@@ -165,6 +165,7 @@ a:hover {
   .collections {
     margin-top: 2rem;
     background-color: var(--color-bg-white-tranp);
+    border-radius: 20px 5px 20px 5px;
   }
 
   .collection-list {
