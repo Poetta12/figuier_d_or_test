@@ -1,38 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Sour+Gummy&display=swap');
 
-/* Applique le curseur flamme globalement */
+/* Mode par défaut : dark-mode */
+
 html, body {
     cursor: none;
 }
 
-/* Fonts */
-@font-face {
-    font-family: 'Nexa Script';
-    src: url('../fonts/nexa-script/nexa-script.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Tan Tangkiewood';
-    src: url('../fonts/Pack-in/Pack in.ttf') format('opentype');
-}
-
-h1, h2, h3 {
-    font-family: 'Nexa Script', cursive;
-}
-
-p, span {
-    font-family: 'Tan Tangkiewood', sans-serif;
+button:hover, a:hover{
+    cursor: none;
 }
 
 :root {
     --color-black: #111;
-    --color-gold: #FFD700;
-    --color-bordeaux: #800020;
-    --color-indigo: #4B0082;
+    --color-lightgold: #f4b52b;
+    --color-darkgold: #bd6513;
+    --color-bordeaux: #850000;
+    --color-indigo: #402978;
 
-    --text-color: #FFFFFF;
+    --text-color: antiquewhite;
+    --bg-color: var(--color-black);
+}
+
+/* Light mode variables */
+.light-mode {
+    --color-black: #f9f9f9;
+    --color-lightgold: #ffcc00;
+    --color-darkgold: #d4a017;
+    --color-bordeaux: #d94f4f;
+    --color-indigo: #6b4fa7;
+
+    --text-color: #111;
     --bg-color: var(--color-black);
 }
 
@@ -43,18 +40,50 @@ p, span {
 }
 
 html, body {
-    font-family: 'Tan Tangkiewood', sans-serif;
+    font-family: 'Sour Gummy', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     min-height: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* En hover sur les boutons et liens */
+/* Fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo 2', cursive;
+}
+
+p, span, a {
+    font-family: 'Sour Gummy', sans-serif;
+}
+
+/* Boutons et liens */
+button, a {
+    font-family: 'Sour Gummy', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button {
+    background-color: var(--color-indigo);
+}
+
+button:hover, a:hover {
+    background-color: var(--color-lightgold);
+    transform: scale(1.05);
+}
+
+/* Flamme en hover */
 button:hover ~ .holder .flame,
 a:hover ~ .holder .flame {
-    height: 85px; /* Augmente la hauteur */
-    width: 20000px; /* Augmente légèrement la largeur */
-    transition: all 0.3s ease; /* Transition fluide */
+    height: 85px;
+    width: 20000px;
+    transition: all 0.3s ease;
 }
 
 button:hover ~ .holder .flame:before,
@@ -62,9 +91,24 @@ a:hover ~ .holder .flame:before {
     box-shadow: 0 0 10px 0 rgba(247, 93, 0, 0.6), 0 -4px 3px 0 rgba(247, 128, 0, 0.8);
 }
 
-button:hover, a:hover{
-    cursor: none;
+/* Désactiver le curseur flamme sur mobile */
+@media (max-width: 767px) {
+    html, body {
+        cursor: auto;
+    }
 }
 
+/* Responsive styles */
 
+/* Desktop */
+@media (min-width: 1024px) {
+    button, a {
+        font-size: 1.5rem;
+        padding: 0.8rem 2rem;
+        border-radius: 8px;
+    }
 
+    html, body {
+        font-family: 'Exo 2', cursive;
+    }
+}

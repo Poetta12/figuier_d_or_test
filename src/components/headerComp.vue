@@ -1,11 +1,25 @@
 <template>
   <header class="header">
     <div class="container">
-      <img class="logo" src="/logos/logo-removebg.png" alt="Figuier D'Or">
+      <!-- Logo -->
+      <img class="logo" src="/logos/logo_2-removebg.png" alt="Figuier D'Or" />
+
+
+      <!-- Bouton Toggle Light/Dark -->
+      <button class="theme-toggle" @click="toggleTheme">
+        {{ theme === 'light' ? 'Mode Sombre' : 'Mode Clair' }}
+      </button>
+
+      <!-- Navigation -->
       <nav class="nav">
-        <button class="menu-toggle" @click="toggleMenu">
+        <!-- Menu burger pour mobile -->
+        <button class="menu-toggle" @click="toggleMenu" aria-label="Toggle Menu">
+          <span :class="{ open: isMenuOpen }"></span>
+          <span :class="{ open: isMenuOpen }"></span>
           <span :class="{ open: isMenuOpen }"></span>
         </button>
+
+        <!-- Navigation List -->
         <ul :class="{ 'nav-list': true, open: isMenuOpen }">
           <li>
             <router-link to="/" class="nav-link" exact-active-class="active">Accueil</router-link>
@@ -22,26 +36,24 @@
 <script setup>
 import { ref } from "vue";
 
+// État pour le menu mobile
 const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
+
+// État pour le mode light/dark
+const theme = ref("dark");
+
+const toggleTheme = () => {
+  theme.value = theme.value === "light" ? "dark" : "light";
+  document.body.classList.toggle("light-mode", theme.value === "light");
+};
 </script>
 
 <style scoped>
-/* Palette principale */
-:root {
-  --color-black: #000000;
-  --color-gold: #FFD700;
-  --color-bordeaux: #800020;
-  --color-indigo: #4B0082;
-
-  --text-color: #FFFFFF;
-  --bg-color: var(--color-black);
-}
-
-/* Styles globaux pour le header */
+/* Styles globaux */
 .header {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -52,9 +64,11 @@ const toggleMenu = () => {
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid var(--color-gold);
+  border-bottom: 2px solid var(--color-lightgold);
+  box-shadow: 0 4px 6px var(--color-darkgold);
 }
 
+/* Container */
 .container {
   width: 100%;
   display: flex;
@@ -64,10 +78,10 @@ const toggleMenu = () => {
 
 /* Logo */
 .logo {
-  max-width: 120px;
+  max-width: 150px;
 }
 
-/* Menu Toggle (Mobile) */
+/* Menu Toggle (Burger pour Mobile) */
 .menu-toggle {
   background: none;
   border: none;
@@ -75,14 +89,13 @@ const toggleMenu = () => {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  position: relative;
   z-index: 11;
 }
 
 .menu-toggle span {
   width: 30px;
   height: 3px;
-  background-color: var(--color-gold);
+  background-color: var(--color-lightgold);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -99,14 +112,9 @@ const toggleMenu = () => {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Navigation */
+/* Navigation (Mobile) */
 .nav {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: var(--bg-color);
-  width: 100%;
-  transition: transform 0.3s ease-in-out;
+  position: relative;
 }
 
 .nav-list {
@@ -115,18 +123,25 @@ const toggleMenu = () => {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--color-lightgold);
+  border-radius: 8px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 80%;
   transform: translateY(-200%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
 }
 
 .nav-list.open {
   transform: translateY(0);
 }
 
-/* Navigation Links */
 .nav-link {
-  font-family: "Tan Tangkiewood", serif;
-  font-size: 1.2rem;
-  color: var(--color-gold);
+  font-size: 1rem;
+  color: var(--color-lightgold);
   text-decoration: none;
   margin: 0.5rem 0;
   transition: color 0.3s ease;
@@ -140,27 +155,61 @@ const toggleMenu = () => {
 
 .nav-link:hover {
   color: var(--color-bordeaux);
+  text-shadow: 0 1px 5px var(--color-lightgold);
 }
 
-/* Desktop View */
+/* Bouton Toggle Light/Dark */
+.theme-toggle {
+  background-color: var(--color-indigo);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-family: "Sour Gummy", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-lightgold);
+  transform: scale(1.05);
+}
+
+/* Desktop Styles */
 @media (min-width: 768px) {
+  /* Cache le menu burger sur desktop */
   .menu-toggle {
     display: none;
   }
 
-  .nav {
-    position: static;
-    display: flex;
-  }
-
   .nav-list {
+    position: static;
     flex-direction: row;
+    justify-content: flex-end;
+    width: auto;
+    background: none;
+    border: none;
     transform: translateY(0);
   }
 
   .nav-link {
     margin: 0 1rem;
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-link {
     font-size: 1.5rem;
+    margin: 0 1.5rem;
+  }
+
+  .logo {
+    max-width: 250px;
   }
 }
 </style>

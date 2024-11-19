@@ -15,14 +15,14 @@
 const collections = [
   { id: 1, title: "Bougies moulées", description: "Des formes élégantes et uniques." },
   { id: 2, title: "Bougies parfumées", description: "Des senteurs envoûtantes." },
-  { id: 3, title: "Fondants", description: "Des parfums pour chaque humeur." },
+  { id: 3, title: "Bougies Fondants", description: "Des parfums pour chaque humeur." },
   { id: 4, title: "Bougies de massage", description: "Relaxez-vous avec style." },
 ];
 </script>
 
 <style scoped>
 /* Section générale */
-button:hover, a:hover{
+button:hover, a:hover {
   cursor: none;
 }
 
@@ -34,9 +34,9 @@ button:hover, a:hover{
 }
 
 .section-title {
-  font-family: "Nexa Script", cursive;
+  font-family: "Rubik Iso", cursive;
   font-size: 2rem;
-  color: var(--color-gold);
+  color: var(--color-lightgold);
   margin-bottom: 1.5rem;
 }
 
@@ -54,7 +54,7 @@ button:hover, a:hover{
   color: var(--text-color);
   padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--color-darkgold);
   width: 90%;
   max-width: 300px;
   display: flex;
@@ -66,37 +66,40 @@ button:hover, a:hover{
 
 .collection-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 10px var(--color-lightgold);
 }
 
 .collection-title {
-  font-family: "Nexa Script", cursive;
+  font-family: "Rubik Iso", cursive;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--color-lightgold);
+  text-shadow: 0 2px 4px var(--color-darkgold);
 }
 
 .collection-description {
-  font-family: "Tan Tangkiewood", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 /* Bouton Explorer */
 .explore-button {
-  background-color: var(--color-gold);
+  background-color: var(--color-lightgold);
   color: var(--color-bordeaux);
   border: none;
   border-radius: 5px;
   padding: 0.7rem 1rem;
   cursor: pointer;
-  font-family: "Tan Tangkiewood", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .explore-button:hover {
   background-color: var(--color-bordeaux);
-  color: var(--color-gold);
+  color: var(--color-lightgold);
+  transform: scale(1.1);
 }
 
 /* Grille pour tablettes et desktops */

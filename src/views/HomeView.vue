@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 
-    <CarouselComp />
+    <BannerComp />
     <CollectionsComp />
 
     <footer class="footer">
@@ -11,8 +11,8 @@
 </template>
 
 <script setup>
-import CarouselComp from "@/components/CarouselComp.vue";
 import CollectionsComp from "@/components/CollectionsComp.vue";
+import BannerComp from "@/components/BannerComp.vue";
 </script>
 
 <style scoped>
