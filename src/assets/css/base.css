@@ -11,20 +11,8 @@ button:hover, a:hover{
 }
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Sour+Gummy&display=swap');
 
-/* Mode par défaut : dark-mode */
+/* Mode par défaut : light-mode */
 :root {
-    --color-black: #111;
-    --color-lightgold: #f4b52b;
-    --color-darkgold: #bd6513;
-    --color-bordeaux: #850000;
-    --color-indigo: #402978;
-
-    --text-color: antiquewhite;
-    --bg-color: var(--color-black);
-}
-
-/* Light mode variables */
-[data-theme="light"] {
     --color-black: #f9f9f9;
     --color-lightgold: #ffcc00;
     --color-darkgold: #d4a017;
@@ -33,6 +21,18 @@ button:hover, a:hover{
 
     --text-color: #111;
     --bg-color: #ffffff;
+}
+
+/* Light mode variables */
+[data-theme="dark"] {
+    --color-black: #111;
+    --color-lightgold: #f4b52b;
+    --color-darkgold: #bd6513;
+    --color-bordeaux: #850000;
+    --color-indigo: #402978;
+
+    --text-color: antiquewhite;
+    --bg-color: var(--color-black);
 }
 
 /* Applique une transition fluide à tous les éléments */
