@@ -161,7 +161,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  width: 80%;
+  width: 230%;
   transform: translateY(-200%);
   transition: transform 0.3s ease-in-out;
   z-index: 10;
@@ -225,7 +225,6 @@ a:hover {
   }
 
   .nav-link {
-    margin: 0 1rem;
     font-size: 1.2rem;
   }
 
@@ -237,7 +236,12 @@ a:hover {
 @media (min-width: 1024px) {
   .nav-link {
     font-size: 1.5rem;
-    margin: 0 1.5rem;
+    width: fit-content;
+  }
+
+  .nav-link li{
+    display: inline-block;
+    width: fit-content;
   }
 
   .logo {
