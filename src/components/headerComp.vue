@@ -124,6 +124,9 @@ const updateTheme = (newTheme) => {
 
 .nav {
   position: relative;
+  border: 1px solid var(--color-lightgold);
+  border-radius: 10px;
+  padding: 15px 0;
 }
 
 .nav-list {
@@ -138,8 +141,9 @@ const updateTheme = (newTheme) => {
   top: 0;
   right: -10px;
   width: 230%;
-  transform: translateY(-200%);
+  transform: translateY(-250%);
   transition: transform 0.3s ease-in-out;
+  border: 1px solid var(--color-lightgold);
 }
 
 .nav-list.open {

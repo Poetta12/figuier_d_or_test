@@ -56,8 +56,8 @@ const toggleTheme = () => {
 }
 
 .holder {
-  width: 100px;
-  height: 0;
+  width: 65px;
+  height: 20px;
   position: relative;
   display: flex;
   justify-content: center;
