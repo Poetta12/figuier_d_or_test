@@ -44,7 +44,6 @@
 .banner-button {
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
-  background-color: var(--color-indigo);
   color: var(--text-color);
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;

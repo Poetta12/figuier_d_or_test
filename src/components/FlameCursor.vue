@@ -123,11 +123,11 @@ onBeforeUnmount(() => {
     position: relative;
     width: 40px;
     height: 50px;
-    background: url('/src/assets/figue.png') no-repeat center center;
+    background: url('../assets/figue.png') no-repeat center center;
     background-size: cover;
   }
 
-  /* Mèche */
+  /* Mèche normale */
   .thread {
     position: absolute;
     width: 1px;
@@ -138,6 +138,16 @@ onBeforeUnmount(() => {
     border-radius: 40% 40% 0 0;
     transform: translateX(-50%);
     background: linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
+    transition: all 0.3s ease; /* Transition fluide */
+  }
+
+  /* Accentuation de la mèche en hover */
+  .is-hovering .thread {
+    width: 4px;
+    height: 15px;
+    background: linear-gradient(#ffd700, #ff4500, #8b0000, black, #ff8c00 90%);
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.8), 0 -1px 3px rgba(255, 69, 0, 0.7);
+    transform: translateX(-50%) scaleY(1.2); /* Agrandissement vertical */
   }
 
   /* Flamme avec inclinaison et courbure */
@@ -176,16 +186,6 @@ onBeforeUnmount(() => {
   }
 
   /* Animations */
-  @keyframes enlargeFlame {
-    0%,
-    100% {
-      height: 25px;
-    }
-    50% {
-      height: 28px;
-    }
-  }
-
   /* Lueur autour de la flamme */
   .blinking-glow {
     position: absolute;

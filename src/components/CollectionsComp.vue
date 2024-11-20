@@ -42,7 +42,7 @@ const collections = [
   {
     id: 4,
     title: "Bougies de massage",
-    description: "Relaxez-vous tranquillement avec style.",
+    description: "Relaxez-vous avec style.",
     image: "/img/Massage-bougie.jpeg",
   },
 ];
@@ -120,8 +120,8 @@ a:hover {
 }
 
 .collection-title {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin: 0.5rem 0;
   color: var(--color-lightgold);
   text-shadow: 0 2px 4px var(--color-darkgold);
 }

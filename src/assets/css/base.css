@@ -17,6 +17,7 @@ button:hover, a:hover {
     --color-darkgold: #d4a017;
     --color-bordeaux: #d94f4f;
     --color-indigo: #6b4fa7;
+    --color-indigo-button: rgba(107, 79, 167, 0.8); /* Indigo avec transparence de 80 % */
     --color-bg-black-tranp: rgba(0, 0, 0, 0.2);
     --color-bg-white-tranp: rgba(255, 255, 255, 0.2);
     --img-bg-light: url("../img/christmas_candle.jpg") no-repeat center center fixed;
@@ -32,6 +33,7 @@ button:hover, a:hover {
     --color-darkgold: #bd6513;
     --color-bordeaux: #850000;
     --color-indigo: #402978;
+    --color-indigo-button: rgba(64, 41, 120, 0.8); /* Indigo foncé avec transparence de 80 % */
     --color-bg-black-tranp: rgba(255, 255, 255, 0.2);
     --color-bg-white-tranp: rgba(0, 0, 0, 0.2);
     --img-bg-dark: url("../img/many_candle_bg.jpg") no-repeat center center fixed;
@@ -76,7 +78,7 @@ button, a {
 }
 
 button {
-    background-color: var(--color-indigo);
+    background-color: var(--color-indigo-button);
 }
 
 button:hover, a:hover {
