@@ -2,7 +2,7 @@
   <div id="app">
     <FlameCursor />
     <header-comp/>
-    <div class="wrapper">
+    <div class="container">
       <router-view />
     </div>
   </div>
@@ -15,11 +15,6 @@ import FlameCursor from "@/components/FlameCursor.vue";
 </script>
 
 <style scoped>
-.wrapper{
-  max-width: 1200px;
-  margin: auto;
-}
-
 /* Mode bureau uniquement */
 @media (min-width: 1024px) {
   body[data-theme="dark"]{

@@ -20,6 +20,7 @@
   background: url("@/assets/img/B3.jpg") no-repeat center;
   background-size: cover;
   height: auto; /* S'ajuste au contenu sur mobile */
+
 }
 
 .banner-content {
@@ -33,13 +34,11 @@
 .banner-title {
   font-size: 1.8rem; /* Taille adaptée aux petits écrans */
   margin-bottom: 1rem;
-  font-family: "Rubik Iso", cursive;
 }
 
 .banner-subtitle {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  font-family: "Sour Gummy", sans-serif;
 }
 
 .banner-button {
@@ -58,8 +57,10 @@
 
 /* Desktop styles */
 @media (min-width: 768px) {
+
   .banner {
-    height: 400px;
+    width: 100vw;
+    height: 85vh;
   }
 
   .banner-content {
@@ -67,7 +68,7 @@
   }
 
   .banner-title {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 
   .banner-subtitle {

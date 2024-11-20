@@ -2,14 +2,16 @@
   <header class="header">
     <div class="container">
       <!-- Bouton Toggle Light/Dark -->
-      <button class="theme-toggle-icon" @click="toggleTheme" aria-label="Toggle Theme">
+      <!--<button class="theme-toggle-icon" @click="toggleTheme" aria-label="Toggle Theme">
         <span class="icon">
           <img
             :src="theme === 'dark' ? '/icons/bougie-eteinte.png' : '/icons/bougie-allumee.png'"
             alt="Figuier D'Or"
           />
         </span>
-      </button>
+      </button>-->
+
+      <BougieComp/>
 
       <!-- Logo -->
       <img
@@ -43,6 +45,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import BougieComp from "@/components/BougieComp.vue";
 
 // Sélection de l'élément <body>
 let body;
@@ -109,6 +112,7 @@ a:hover {
   z-index: 10;
   border-bottom: 2px solid var(--color-lightgold);
   box-shadow: 0 4px 6px var(--color-darkgold);
+
 }
 
 /* Container */
@@ -208,7 +212,6 @@ a:hover {
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem 0;
-  font-family: "Sour Gummy", sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -250,6 +253,9 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
+  header{
+    height: 15vh;
+  }
   .nav-link {
     font-size: 1.5rem;
     width: fit-content;

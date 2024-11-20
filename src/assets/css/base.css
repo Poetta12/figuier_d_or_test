@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Sour+Gummy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Agbalumo:wght@400;700&display=swap');
 
 /* Mode par défaut : dark-mode */
 
@@ -6,7 +6,7 @@ html, body {
     cursor: none;
 }
 
-button:hover, a:hover{
+button:hover, a:hover {
     cursor: none;
 }
 
@@ -17,7 +17,7 @@ button:hover, a:hover{
     --color-darkgold: #d4a017;
     --color-bordeaux: #d94f4f;
     --color-indigo: #6b4fa7;
-    --color-bg-black-tranp : rgba(0, 0, 0, 0.2);
+    --color-bg-black-tranp: rgba(0, 0, 0, 0.2);
     --color-bg-white-tranp: rgba(255, 255, 255, 0.2);
     --img-bg-light: url("../img/christmas_candle.jpg") no-repeat center center fixed;
 
@@ -32,7 +32,7 @@ button:hover, a:hover{
     --color-darkgold: #bd6513;
     --color-bordeaux: #850000;
     --color-indigo: #402978;
-    --color-bg-black-tranp : rgba(255, 255, 255, 0.2);
+    --color-bg-black-tranp: rgba(255, 255, 255, 0.2);
     --color-bg-white-tranp: rgba(0, 0, 0, 0.2);
     --img-bg-dark: url("../img/many_candle_bg.jpg") no-repeat center center fixed;
 
@@ -49,7 +49,7 @@ button:hover, a:hover{
 }
 
 html, body {
-    font-family: 'Sour Gummy', sans-serif;
+    font-family: 'Agbalumo', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     min-height: 100%;
@@ -57,16 +57,15 @@ html, body {
 
 /* Fonts */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Exo 2', cursive;
+    font-family: 'Tangerine', cursive;
 }
 
-p, span, a {
-    font-family: 'Sour Gummy', sans-serif;
+p, span, a, button {
+    font-family: 'Agbalumo', sans-serif;
 }
 
 /* Boutons et liens */
 button, a {
-    font-family: 'Sour Gummy', sans-serif;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     color: var(--text-color);
@@ -108,6 +107,10 @@ a:hover ~ .holder .flame:before {
 
 /* Desktop */
 @media (min-width: 1024px) {
+    .wrapper {
+        max-width: 1200px;
+        margin: auto;
+    }
 
     body {
         background: var(--img-bg-light);
@@ -126,6 +129,6 @@ a:hover ~ .holder .flame:before {
     }
 
     html, body {
-        font-family: 'Exo 2', cursive;
+        font-family: 'Agbalumo', sans-serif;
     }
 }

@@ -64,8 +64,7 @@ a:hover {
 }
 
 .section-title {
-  font-family: "Rubik Iso", cursive;
-  font-size: 2rem;
+  font-size: 6rem;
   color: var(--color-lightgold);
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px var(--color-black);
@@ -121,7 +120,6 @@ a:hover {
 }
 
 .collection-title {
-  font-family: "Rubik Iso", cursive;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--color-lightgold);
@@ -129,7 +127,6 @@ a:hover {
 }
 
 .collection-description {
-  font-family: "Sour Gummy", sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -142,7 +139,6 @@ a:hover {
   border-radius: 5px;
   padding: 0.7rem 1rem;
   cursor: pointer;
-  font-family: "Sour Gummy", sans-serif;
   font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }

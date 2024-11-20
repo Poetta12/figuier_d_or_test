@@ -2,7 +2,11 @@
   <div class="home">
 
     <BannerComp />
-    <CollectionsComp />
+    <div class="wrapper">
+      <CollectionsComp />
+    </div>
+
+
 
     <footer class="footer">
       <p>&copy; 2024 Figuier D'Or. Tous droits réservés.</p>
