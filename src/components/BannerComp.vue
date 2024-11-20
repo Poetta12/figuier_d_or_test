@@ -79,4 +79,19 @@
     padding: 0.8rem 2rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .banner-content {
+    max-width: 1400px; /* Prend toute la largeur sur mobile */
+    padding: 50px;
+  }
+
+  .banner-title {
+    font-size: 7rem; /* Taille adaptée aux grands écrans */
+  }
+
+  .banner-subtitle {
+    font-size: 2rem;
+  }
+}
 </style>
