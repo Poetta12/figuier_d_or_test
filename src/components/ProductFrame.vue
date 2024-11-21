@@ -81,8 +81,7 @@ const onActionClick = () => {
 
 /* Nom du produit */
 .product-name {
-  font-family: "Exo 2", cursive;
-  font-size: 1.4rem;
+  font-size: 3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--color-bordeaux);
@@ -90,7 +89,6 @@ const onActionClick = () => {
 
 /* Description */
 .product-description {
-  font-family: "Sour Gummy", sans-serif;
   font-size: 0.9rem;
   margin-bottom: 1rem;
   color: #666;
@@ -99,7 +97,6 @@ const onActionClick = () => {
 /* Bouton */
 .product-button {
   padding: 0.5rem 1rem;
-  font-family: "Sour Gummy", sans-serif;
   font-size: 0.9rem;
   background-color: var(--color-indigo);
   color: #fff;
@@ -130,7 +127,7 @@ const onActionClick = () => {
   }
 
   .product-name {
-    font-size: 1.6rem;
+    font-size: 3rem;
   }
 
   .product-description {
@@ -158,7 +155,7 @@ const onActionClick = () => {
   }
 
   .product-name {
-    font-size: 1.8rem;
+    font-size: 4rem;
   }
 
   .product-description {

@@ -94,7 +94,6 @@ const addToCart = (product) => {
 
 .catalogue-title {
   text-align: center;
-  font-family: "Exo 2", cursive;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
