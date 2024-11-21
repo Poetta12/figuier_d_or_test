@@ -36,31 +36,31 @@ const products = [
     id: 1,
     name: "Bougie Élégante",
     description: "Une bougie raffinée pour illuminer vos soirées.",
-    image: "src/assets/img/bougies/B10.jpg",
+    image: "/bougies/B10.jpg",
   },
   {
     id: 2,
     name: "Bougie Artisanale",
     description: "Fabriquée à la main avec des matériaux de qualité.",
-    image: "src/assets/img/bougies/B11.jpg",
+    image: "/bougies/B11.jpg",
   },
   {
     id: 3,
     name: "Bougie Naturelle",
     description: "Parfum doux et naturel pour un moment de détente.",
-    image: "src/assets/img/bougies/B12.jpg",
+    image: "/bougies/B12.jpg",
   },
   {
     id: 4,
     name: "Bougie Festive",
     description: "Parfaite pour célébrer vos événements spéciaux.",
-    image: "src/assets/img/bougies/B13.jpg",
+    image: "/bougies/B13.jpg",
   },
   {
     id: 5,
     name: "Bougie Minimaliste",
     description: "Un design simple et épuré, idéal pour votre intérieur.",
-    image: "src/assets/img/bougies/B15.jpg",
+    image: "/bougies/B15.jpg",
   },
 ];
 // Gestion de la fenêtre modale

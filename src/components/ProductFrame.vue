@@ -13,7 +13,6 @@
 
 <script setup>
 import {defineProps, defineEmits} from "vue";
-import FlameCursor from "@/components/FlameCursor.vue";
 
 // Props pour personnaliser le produit
 defineProps({
