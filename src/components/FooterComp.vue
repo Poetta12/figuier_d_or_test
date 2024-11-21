@@ -13,10 +13,10 @@
         <div class="footer-section">
           <h3 class="footer-title">Navigation</h3>
           <ul class="footer-links">
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/shop">Boutique</a></li>
-            <li><a href="/collections">Collections</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><router-link to="/" class="nav-link" exact-active-class="active">Accueil</router-link></li>
+            <li><router-link to="/catalogue" class="nav-link" exact-active-class="active">Catalogue</router-link></li>
+            <li><router-link to="/about" class="nav-link" exact-active-class="active">À propos</router-link></li>
+            <li><a href="/blog">Contactez-nous</a></li>
           </ul>
         </div>
 
@@ -24,9 +24,9 @@
         <div class="footer-section">
           <h3 class="footer-title">Support Client</h3>
           <ul class="footer-links">
-            <li><a href="/faq">FAQ</a></li>
-            <li><a href="/returns">Retours & Échanges</a></li>
-            <li><a href="/contact">Contactez-nous</a></li>
+            <li><router-link to="/faq" class="nav-link">FAQ</router-link></li> <!-- Utilisation de router-link -->
+            <li><router-link to="/eco-commitment" class="nav-link" exact-active-class="active">Engagement écologique</router-link></li>
+            <li><router-link to="/conditions-livraison" class="nav-link">Conditions de livraison</router-link></li>
             <li><a href="/track-order">Suivi de commande</a></li>
           </ul>
         </div>
@@ -121,12 +121,23 @@
 }
 
 .footer-title {
-  font-size: 1.2rem;
+  position: relative;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: #d4a017;
-  border-bottom: 2px solid #a88729;
   display: inline-block;
+}
+
+.footer-title:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 2px;
+  background-color: #a88729;
 }
 
 .footer-links {

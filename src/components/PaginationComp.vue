@@ -55,7 +55,6 @@ defineEmits(['changePage']);
   color: var(--text-color);
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 

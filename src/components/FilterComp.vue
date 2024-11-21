@@ -79,7 +79,7 @@ h4{
   gap: 1.5rem;
   padding: 1.5rem;
   margin-bottom: 20px;
-  background: #ffffff;
+  background: var(--bg-color);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(255, 255, 255, 0.6);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
