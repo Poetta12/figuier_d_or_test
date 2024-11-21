@@ -85,13 +85,12 @@ const addToCart = () => {
 /* Bouton de fermeture */
 .close-button {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: -19px;
+  right: -22px;
   background: none;
   border: none;
   color: var(--text-color);
   font-size: 1.5rem;
-  cursor: pointer;
 }
 
 /* Image du produit */
@@ -132,7 +131,6 @@ const addToCart = () => {
   color: var(--text-color);
   border: none;
   border-radius: 20px;
-  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
