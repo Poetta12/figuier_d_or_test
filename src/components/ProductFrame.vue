@@ -6,8 +6,8 @@
     <div class="product-details">
       <h2 class="product-name">{{ name }}</h2>
       <p class="product-description">{{ description }}</p>
-      <button class="product-button" @click="onActionClick">{{ buttonText }}</button>
     </div>
+    <button class="product-button" @click="onActionClick">{{ buttonText }}</button>
   </div>
 </template>
 
@@ -38,6 +38,7 @@ const onActionClick = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   text-align: center;
   padding: 1rem;
   border-radius: 10px;
@@ -155,7 +156,7 @@ const onActionClick = () => {
   }
 
   .product-name {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .product-description {
