@@ -14,7 +14,6 @@
 
 <script setup>
 import { defineProps, defineEmits } from "vue";
-import FlameCursor from "@/components/FlameCursor.vue";
 
 // Propriétés reçues par le composant
 defineProps({
@@ -43,6 +42,9 @@ const addToCart = () => {
 </script>
 
 <style scoped>
+/* Mobile-first styles */
+
+/* Conteneur principal de la modale */
 .product-details-modal {
   position: fixed;
   top: 0;
@@ -55,6 +57,7 @@ const addToCart = () => {
   z-index: 1000;
 }
 
+/* Fond d'overlay */
 .modal-overlay {
   position: absolute;
   top: 0;
@@ -65,67 +68,120 @@ const addToCart = () => {
   z-index: 1;
 }
 
+/* Contenu de la modale */
 .modal-content {
   position: relative;
   background: var(--bg-color);
   color: var(--text-color);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
   width: 90%;
-  max-width: 600px;
+  max-width: 360px; /* Taille max sur mobile */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 2;
   text-align: center;
 }
 
+/* Bouton de fermeture */
 .close-button {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem;
   background: none;
   border: none;
   color: var(--text-color);
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
+/* Image du produit */
 .product-image {
   width: 100%;
-  max-width: 300px;
   height: auto;
   margin-bottom: 1rem;
   border-radius: 8px;
 }
 
+/* Nom du produit */
 .product-name {
   font-family: "Exo 2", cursive;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Description */
+.product-description {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
-.product-description {
-  font-family: "Sour Gummy", sans-serif;
+/* Prix */
+.product-price {
+  font-weight: bold;
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.product-price {
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
+/* Bouton "Ajouter au panier" */
 .add-to-cart-button {
-  padding: 0.8rem 1.5rem;
+  padding: 0.5rem 1rem;
   font-family: "Sour Gummy", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background-color: var(--color-indigo);
   color: var(--text-color);
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
+  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .add-to-cart-button:hover {
   background-color: var(--color-lightgold);
   transform: scale(1.05);
+}
+
+/* Responsive styles */
+
+/* Tablettes (min-width: 768px) */
+@media (min-width: 768px) {
+  .modal-content {
+    max-width: 500px;
+    padding: 2rem;
+  }
+
+  .product-name {
+    font-size: 1.8rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+  }
+
+  .add-to-cart-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .modal-content {
+    max-width: 600px;
+    padding: 2.5rem;
+  }
+
+  .product-name {
+    font-size: 2rem;
+  }
+
+  .product-description {
+    font-size: 1.1rem;
+  }
+
+  .add-to-cart-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
 }
 </style>

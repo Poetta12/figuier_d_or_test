@@ -12,14 +12,14 @@
 </template>
 
 <script setup>
-import {defineProps, defineEmits} from "vue";
+import { defineProps, defineEmits } from "vue";
 
 // Props pour personnaliser le produit
 defineProps({
-  image: {type: String, required: true},
-  name: {type: String, required: true},
-  description: {type: String, required: true},
-  buttonText: {type: String, default: "Découvrir"},
+  image: { type: String, required: true },
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  buttonText: { type: String, default: "Découvrir" },
 });
 
 // Événement d'action pour le bouton
@@ -31,33 +31,35 @@ const onActionClick = () => {
 </script>
 
 <style scoped>
+/* Base styles: mobile-first */
+
 /* Conteneur principal */
 .product-frame {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.5rem;
-  border-radius: 12px;
-  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-frame:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Image container avec effet subtil */
+/* Conteneur de l'image */
 .image-container {
   width: 100%;
-  max-width: 250px;
-  height: 250px;
+  max-width: 200px;
+  height: 200px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 8px;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
@@ -73,14 +75,14 @@ const onActionClick = () => {
 
 /* Détails du produit */
 .product-details {
+  padding: 0 0.5rem;
   color: var(--text-color);
-  padding: 0 1rem;
 }
 
 /* Nom du produit */
 .product-name {
   font-family: "Exo 2", cursive;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--color-bordeaux);
@@ -89,27 +91,83 @@ const onActionClick = () => {
 /* Description */
 .product-description {
   font-family: "Sour Gummy", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #666; /* Couleur douce pour le texte secondaire */
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #666;
 }
 
 /* Bouton */
 .product-button {
-  padding: 0.8rem 1.8rem;
+  padding: 0.5rem 1rem;
   font-family: "Sour Gummy", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background-color: var(--color-indigo);
   color: #fff;
   border: none;
-  border-radius: 25px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .product-button:hover {
   background-color: var(--color-lightgold);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
+}
+
+/* Styles supplémentaires pour tablettes et desktops */
+
+/* Tablettes (min-width: 768px) */
+@media (min-width: 768px) {
+  .product-frame {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .image-container {
+    max-width: 250px;
+    height: 250px;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-name {
+    font-size: 1.6rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+  }
+
+  .product-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .product-frame {
+    padding: 2rem;
+    border-radius: 15px;
+  }
+
+  .image-container {
+    max-width: 300px;
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+
+  .product-name {
+    font-size: 1.8rem;
+  }
+
+  .product-description {
+    font-size: 1.1rem;
+  }
+
+  .product-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
 }
 </style>

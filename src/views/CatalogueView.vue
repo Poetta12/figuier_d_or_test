@@ -27,8 +27,7 @@
 <script setup>
 import ProductFrame from "@/components/ProductFrame.vue";
 import ProductDetails from "@/components/ProductDetails.vue";
-import { ref } from "vue";
-import FlameCursor from "@/components/FlameCursor.vue";
+import {ref} from "vue";
 
 // Liste des produits
 const products = [
@@ -63,6 +62,7 @@ const products = [
     image: "/bougies/B15.jpg",
   },
 ];
+
 // Gestion de la fenêtre modale
 const selectedProduct = ref(null);
 const isModalVisible = ref(false);
@@ -84,8 +84,10 @@ const addToCart = (product) => {
 </script>
 
 <style scoped>
+/* Base styles for mobile-first design */
+
 .catalogue-page {
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -93,13 +95,41 @@ const addToCart = (product) => {
 .catalogue-title {
   text-align: center;
   font-family: "Exo 2", cursive;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Responsive styles for tablets */
+@media (min-width: 768px) {
+  .catalogue-page {
+    padding: 2rem;
+  }
+
+  .catalogue-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .products-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Responsive styles for desktops */
+@media (min-width: 1024px) {
+  .catalogue-title {
+    font-size: 2.5rem;
+  }
+
+  .products-grid {
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 </style>
