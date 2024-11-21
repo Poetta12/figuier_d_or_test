@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "Bougie Élégante",
+    "description": "Une bougie raffinée pour illuminer vos soirées.",
+    "image": "/bougies/B10.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Bougie Artisanale",
+    "description": "Fabriquée à la main avec des matériaux de qualité.",
+    "image": "/bougies/B11.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Bougie Naturelle",
+    "description": "Parfum doux et naturel pour un moment de détente.",
+    "image": "/bougies/B12.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Bougie Festive",
+    "description": "Parfaite pour célébrer vos événements spéciaux.",
+    "image": "/bougies/B13.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Bougie Minimaliste",
+    "description": "Un design simple et épuré, idéal pour votre intérieur.",
+    "image": "/bougies/B15.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Bougie Élégante 2",
+    "description": "Une touche élégante pour illuminer votre maison.",
+    "image": "/bougies/B10.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Bougie Artisanale 2",
+    "description": "Confectionnée à la main pour un moment unique.",
+    "image": "/bougies/B11.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Bougie Naturelle 2",
+    "description": "Apportez une senteur naturelle dans votre quotidien.",
+    "image": "/bougies/B12.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Bougie Festive 2",
+    "description": "Illuminez vos célébrations avec style.",
+    "image": "/bougies/B13.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Bougie Minimaliste 2",
+    "description": "Un design épuré pour s'adapter à toutes les ambiances.",
+    "image": "/bougies/B15.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Bougie Élégante 3",
+    "description": "Ajoutez une touche de raffinement à votre intérieur.",
+    "image": "/bougies/B10.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Bougie Artisanale 3",
+    "description": "Une bougie artisanale fabriquée avec passion.",
+    "image": "/bougies/B11.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Bougie Naturelle 3",
+    "description": "Senteur douce et apaisante pour vos moments calmes.",
+    "image": "/bougies/B12.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Bougie Festive 3",
+    "description": "Créez une ambiance festive avec cette bougie unique.",
+    "image": "/bougies/B13.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Bougie Minimaliste 3",
+    "description": "Un style minimaliste pour sublimer votre décor.",
+    "image": "/bougies/B15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Bougie Élégante 4",
+    "description": "Parfaite pour des soirées élégantes et cosy.",
+    "image": "/bougies/B10.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Bougie Artisanale 4",
+    "description": "Un artisanat local pour une expérience unique.",
+    "image": "/bougies/B11.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Bougie Naturelle 4",
+    "description": "Une senteur inspirée par la nature.",
+    "image": "/bougies/B12.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Bougie Festive 4",
+    "description": "Parfaite pour vos fêtes et réceptions.",
+    "image": "/bougies/B13.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Bougie Minimaliste 4",
+    "description": "Une bougie simple pour un intérieur moderne.",
+    "image": "/bougies/B15.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Bougie Élégante 5",
+    "description": "Pour une touche d'élégance dans vos soirées.",
+    "image": "/bougies/B10.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Bougie Artisanale 5",
+    "description": "La qualité artisanale à votre portée.",
+    "image": "/bougies/B11.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Bougie Naturelle 5",
+    "description": "Des parfums naturels pour une maison chaleureuse.",
+    "image": "/bougies/B12.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Bougie Festive 5",
+    "description": "Célébrez vos moments précieux avec style.",
+    "image": "/bougies/B13.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Bougie Minimaliste 5",
+    "description": "Un design épuré pour un cadre moderne.",
+    "image": "/bougies/B15.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Bougie Élégante 6",
+    "description": "L'élégance d'une lumière douce et chaleureuse.",
+    "image": "/bougies/B10.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Bougie Artisanale 6",
+    "description": "Une bougie artisanale d'exception.",
+    "image": "/bougies/B11.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Bougie Naturelle 6",
+    "description": "Un souffle de nature dans votre maison.",
+    "image": "/bougies/B12.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Bougie Festive 6",
+    "description": "Apportez une touche festive à vos soirées.",
+    "image": "/bougies/B13.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Bougie Minimaliste 6",
+    "description": "Un design qui s'intègre parfaitement à votre intérieur.",
+    "image": "/bougies/B15.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Bougie Élégante 7",
+    "description": "Une bougie chic et sophistiquée.",
+    "image": "/bougies/B10.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Bougie Artisanale 7",
+    "description": "Une touche artisanale pour une ambiance unique.",
+    "image": "/bougies/B11.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Bougie Naturelle 7",
+    "description": "Retrouvez le calme de la nature chez vous.",
+    "image": "/bougies/B12.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Bougie Festive 7",
+    "description": "Illuminez vos célébrations avec élégance.",
+    "image": "/bougies/B13.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Bougie Minimaliste 7",
+    "description": "Un style minimaliste et raffiné.",
+    "image": "/bougies/B15.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Bougie Élégante 8",
+    "description": "Pour des soirées chics et cosy.",
+    "image": "/bougies/B10.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Bougie Artisanale 8",
+    "description": "Un savoir-faire artisanal d'exception.",
+    "image": "/bougies/B11.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Bougie Naturelle 8",
+    "description": "Un parfum naturel pour sublimer votre intérieur.",
+    "image": "/bougies/B12.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Bougie Festive 8",
+    "description": "Une touche festive pour illuminer vos fêtes.",
+    "image": "/bougies/B13.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Bougie Minimaliste 8",
+    "description": "Un design intemporel pour toutes les occasions.",
+    "image": "/bougies/B15.jpg"
+  }
+]
