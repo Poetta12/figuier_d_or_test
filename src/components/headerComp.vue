@@ -161,8 +161,10 @@ const updateTheme = (newTheme) => {
 .nav-link.active {
   font-weight: bold;
   text-decoration: underline;
-  color: var(--color-indigo);
+  color: var(--text-color); /* Conservez la couleur du texte */
+  text-shadow: 0 0 10px var(--color-lightgold), 0 0 20px var(--color-lightgold);
 }
+
 
 .nav-link:hover {
   color: var(--color-bordeaux);
