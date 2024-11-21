@@ -49,13 +49,14 @@
         class="smoke-path layer1"
         d="M50 150 C 30 130, 70 110, 50 90 S 30 50, 50 30"
       />
-      <path
-        class="smoke-path layer2"
-        d="M50 150 C 40 120, 60 100, 50 70 S 40 40, 50 20"
-      />
+
       <path
         class="smoke-path layer3"
         d="M50 150 C 20 140, 80 120, 50 60 S 20 30, 50 10"
+      />
+      <path
+        class="smoke-path layer2"
+        d="M50 150 C 40 120, 60 100, 50 70 S 40 40, 50 20"
       />
       <path
         class="smoke-path layer4"

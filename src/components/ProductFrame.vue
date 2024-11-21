@@ -1,12 +1,24 @@
 <template>
   <div class="product-frame">
+    <!-- Image -->
     <div class="image-container">
       <img class="product-image" :src="image" :alt="name" />
     </div>
+
+    <!-- Détails du produit -->
     <div class="product-details">
       <h2 class="product-name">{{ name }}</h2>
       <p class="product-description">{{ description }}</p>
+
+      <!-- Meta informations -->
+      <div class="product-meta">
+        <p><strong>Catégorie :</strong> {{ category }}</p>
+        <p><strong>Couleur :</strong> {{ color }}</p>
+        <p><strong>Prix :</strong> {{ price }} €</p>
+      </div>
     </div>
+
+    <!-- Bouton d'action -->
     <button class="product-button" @click="onActionClick">{{ buttonText }}</button>
   </div>
 </template>
@@ -19,6 +31,9 @@ defineProps({
   image: { type: String, required: true },
   name: { type: String, required: true },
   description: { type: String, required: true },
+  category: { type: String, required: true },
+  color: { type: String, required: true },
+  price: { type: Number, required: true },
   buttonText: { type: String, default: "Découvrir" },
 });
 
@@ -40,27 +55,27 @@ const onActionClick = () => {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  padding: 1rem;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f8f8f8, #e0e0e0);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.7);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-frame:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15), -10px -10px 20px rgba(255, 255, 255, 0.8);
 }
 
 /* Conteneur de l'image */
 .image-container {
   width: 100%;
-  max-width: 200px;
-  height: 200px;
+  max-width: 220px;
+  height: 220px;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.6);
 }
 
 .product-image {
@@ -71,18 +86,20 @@ const onActionClick = () => {
 }
 
 .image-container:hover .product-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* Détails du produit */
 .product-details {
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   color: var(--text-color);
+  text-align: left;
+  padding-bottom: 10px;
 }
 
 /* Nom du produit */
 .product-name {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--color-bordeaux);
@@ -90,26 +107,35 @@ const onActionClick = () => {
 
 /* Description */
 .product-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
-  color: #666;
+  color: #555;
+}
+
+/* Informations supplémentaires */
+.product-meta p {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+  color: #777;
 }
 
 /* Bouton */
 .product-button {
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  background-color: var(--color-indigo);
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background: linear-gradient(145deg, #6b4fa7, #583b8c);
   color: #fff;
   border: none;
   border-radius: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .product-button:hover {
-  background-color: var(--color-lightgold);
+  background: linear-gradient(145deg, #7d5eb6, #6b4fa7);
   transform: translateY(-2px);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), -6px -6px 15px rgba(255, 255, 255, 0.8);
 }
 
 /* Styles supplémentaires pour tablettes et desktops */
@@ -117,27 +143,31 @@ const onActionClick = () => {
 /* Tablettes (min-width: 768px) */
 @media (min-width: 768px) {
   .product-frame {
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 2rem;
+    border-radius: 16px;
   }
 
   .image-container {
-    max-width: 250px;
-    height: 250px;
+    max-width: 260px;
+    height: 260px;
     margin-bottom: 1.5rem;
   }
 
   .product-name {
-    font-size: 3rem;
+    font-size: 1.8rem;
   }
 
   .product-description {
+    font-size: 1.1rem;
+  }
+
+  .product-meta p {
     font-size: 1rem;
   }
 
   .product-button {
-    font-size: 1rem;
-    padding: 0.7rem 1.2rem;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 25px;
   }
 }
@@ -145,8 +175,8 @@ const onActionClick = () => {
 /* Desktop (min-width: 1024px) */
 @media (min-width: 1024px) {
   .product-frame {
-    padding: 2rem;
-    border-radius: 15px;
+    padding: 1rem;
+    border-radius: 20px;
   }
 
   .image-container {
@@ -156,16 +186,21 @@ const onActionClick = () => {
   }
 
   .product-name {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .product-description {
+    font-size: 1.2rem;
+  }
+
+  .product-meta p {
     font-size: 1.1rem;
   }
 
   .product-button {
-    font-size: 1.1rem;
-    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
   }
 }
 </style>
+

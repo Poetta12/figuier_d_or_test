@@ -10,7 +10,6 @@
         <div class="collection-content">
           <h3 class="collection-title">{{ collection.title }}</h3>
           <p class="collection-description">{{ collection.description }}</p>
-
         </div>
         <button class="explore-button">Explorer la boutique</button>
       </div>
@@ -18,19 +17,18 @@
   </section>
 </template>
 
-
 <script setup>
 const collections = [
   {
     id: 1,
-    title: "Bougies moulées",
-    description: "Des formes élégantes et uniques.",
+    title: "Bougies Sculptées",
+    description: "De véritables œuvres d'art faites à la main.",
     image: "/img/moule-bougie-originale.webp",
   },
   {
     id: 2,
-    title: "Bougies parfumées",
-    description: "Des belles senteurs envoûtantes.",
+    title: "Bougies Aromathérapie",
+    description: "Des fragrances apaisantes pour votre bien-être.",
     image: "/img/bougie-parfumée.png",
   },
   {
@@ -41,26 +39,45 @@ const collections = [
   },
   {
     id: 4,
-    title: "Bougies de massage",
+    title: "Bougies de Massage",
     description: "Relaxez-vous avec style.",
     image: "/img/Massage-bougie.jpeg",
+  },
+  {
+    id: 5,
+    title: "Bougies LED",
+    description: "Éclat durable sans flamme pour une sécurité optimale.",
+    image: "/img/Bougie-led.webp",
+  },
+  {
+    id: 6,
+    title: "Bougies pour Enfants",
+    description: "Des designs amusants et colorés pour les plus jeunes.",
+    image: "/img/enfant.webp",
+  },
+  {
+    id: 7,
+    title: "Bougies Festives",
+    description: "Ajoutez une touche spéciale à vos célébrations.",
+    image: "/img/bougies-noel.jpg",
+  },
+  {
+    id: 8,
+    title: "Bougies de Méditation",
+    description: "Créez une ambiance propice à la relaxation.",
+    image: "/img/bougiedemeditation.webp",
   },
 ];
 </script>
 
-
 <style scoped>
-/* Section générale */
-button:hover,
-a:hover {
-  cursor: none;
-}
-
+/* Styles inchangés */
 .collections {
   padding: 2rem 1rem;
   background-color: var(--bg-color);
   color: var(--text-color);
   text-align: center;
+  box-shadow: 0 4px 6px var(--color-darkgold);
 }
 
 .section-title {
@@ -70,7 +87,6 @@ a:hover {
   text-shadow: 2px 2px var(--color-black);
 }
 
-/* Liste des collections */
 .collection-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -78,7 +94,6 @@ a:hover {
   justify-items: center;
 }
 
-/* Éléments des collections */
 .collection-item {
   background-color: var(--color-indigo);
   border-radius: 15px;
@@ -98,7 +113,6 @@ a:hover {
   box-shadow: 0 6px 10px var(--color-lightgold);
 }
 
-/* Image d'arrière-plan */
 .collection-image {
   width: 100%;
   height: 200px;
@@ -107,16 +121,11 @@ a:hover {
   border-radius: 15px 15px 0 0;
 }
 
-/* Contenu de la collection */
 .collection-content {
   display: flex;
   flex-direction: column;
   background-color: var(--color-indigo);
   color: var(--text-color);
-}
-
-.collection-content:last-child{
-  justify-self: flex-end;
 }
 
 .collection-title {
@@ -131,7 +140,6 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-/* Bouton Explorer */
 .explore-button {
   background-color: var(--color-lightgold);
   color: var(--color-bordeaux);
@@ -149,7 +157,6 @@ a:hover {
   transform: scale(1.1);
 }
 
-/* Grille pour tablettes et desktops */
 @media (min-width: 768px) {
   .collection-list {
     grid-template-columns: repeat(2, 1fr);
@@ -160,7 +167,7 @@ a:hover {
 @media (min-width: 1024px) {
   .collections {
     margin-top: 2rem;
-    background-color: var(--color-bg-white-tranp);
+    background-color: var(--color-bg-transp);
     border-radius: 20px 5px 20px 5px;
   }
 
@@ -172,7 +179,7 @@ a:hover {
   .collection-item {
     width: 100%;
   }
-  .collection-content{
+  .collection-content {
     padding: 0 10px;
   }
 }

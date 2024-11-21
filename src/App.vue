@@ -5,6 +5,7 @@
     <div class="container">
       <router-view />
     </div>
+    <FooterComp/>
   </div>
 </template>
 
@@ -12,18 +13,8 @@
 /* Pas de logique pour l'instant */
 import HeaderComp from "@/components/headerComp.vue";
 import FlameCursor from "@/components/FlameCursor.vue";
+import FooterComp from "@/components/FooterComp.vue";
 </script>
 
 <style scoped>
-/* Mode bureau uniquement */
-@media (min-width: 1024px) {
-  body[data-theme="dark"]{
-    background: var(--img-bg-light);
-    background-size: cover;
-  }
-  body[data-theme="light"]{
-    background: var(--img-bg-light);
-    background-size: cover;
-  }
-}
 </style>

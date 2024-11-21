@@ -1,6 +1,12 @@
 <template>
   <div class="catalogue-page">
     <h1 class="catalogue-title">Catalogue des Bougies Artisanales</h1>
+
+    <!-- Composant de filtre -->
+    <FilterComp @filter-change="updateFilters" />
+
+
+    <!-- Grille des produits -->
     <div class="products-grid">
       <ProductFrame
         v-for="product in paginatedProducts"
@@ -8,6 +14,9 @@
         :image="product.image"
         :name="product.name"
         :description="product.description"
+        :category="product.category"
+        :color="product.color"
+        :price="product.price"
         :buttonText="'Découvrir'"
         @actionClick="showDetails(product)"
       />
@@ -35,11 +44,14 @@
 import ProductFrame from "@/components/ProductFrame.vue";
 import ProductDetails from "@/components/ProductDetails.vue";
 import PaginationComp from "@/components/PaginationComp.vue";
+import FilterComp from "@/components/FilterComp.vue";
 import productsData from "/database/bougies.json";
 import { ref, computed } from "vue";
 
-// Gestion de la fenêtre modale
+// Liste des produits
 const products = ref(productsData);
+
+// Gestion de la fenêtre modale
 const selectedProduct = ref(null);
 const isModalVisible = ref(false);
 
@@ -47,12 +59,38 @@ const isModalVisible = ref(false);
 const currentPage = ref(1);
 const itemsPerPage = 9; // Nombre d'éléments par page
 
-// Calcul des pages
-const totalPages = computed(() => Math.ceil(products.value.length / itemsPerPage));
+// Filtres actifs
+const activeFilters = ref({
+  search: "",
+  category: "",
+  color: "",
+  priceRange: 100,
+});
+
+// Produits filtrés
+const filteredProducts = computed(() => {
+  return products.value.filter((product) => {
+    const matchesSearch = activeFilters.value.search === "" || product.name.toLowerCase().includes(activeFilters.value.search.toLowerCase());
+    const matchesCategory = activeFilters.value.category === "" || product.category === activeFilters.value.category;
+    const matchesColor = activeFilters.value.color === "" || product.color === activeFilters.value.color;
+    const matchesPrice = product.price <= activeFilters.value.priceRange;
+
+    return matchesSearch && matchesCategory && matchesColor && matchesPrice;
+  });
+});
+
+// Pagination calculée
+const totalPages = computed(() => Math.ceil(filteredProducts.value.length / itemsPerPage));
 const paginatedProducts = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage;
-  return products.value.slice(start, start + itemsPerPage);
+  return filteredProducts.value.slice(start, start + itemsPerPage);
 });
+
+// Mise à jour des filtres
+const updateFilters = (filters) => {
+  activeFilters.value = { ...filters };
+  currentPage.value = 1; // Réinitialiser à la première page lors de l'application de nouveaux filtres
+};
 
 // Actions pour la pagination
 const goToPage = (page) => {
@@ -61,21 +99,25 @@ const goToPage = (page) => {
   }
 };
 
+// Affichage des détails
 const showDetails = (product) => {
   selectedProduct.value = product;
   isModalVisible.value = true;
 };
 
+// Fermeture de la modale
 const closeModal = () => {
   isModalVisible.value = false;
   selectedProduct.value = null;
 };
 
+// Ajout au panier
 const addToCart = (product) => {
   console.log("Ajouté au panier :", product);
   closeModal();
 };
 </script>
+
 
 
 

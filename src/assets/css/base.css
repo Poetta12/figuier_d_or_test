@@ -12,33 +12,34 @@ button:hover, a:hover {
 
 /* Mode par défaut : light-mode */
 :root {
-    --color-black: #111;
+    --color-black: #333;
+    --color-white: #fffceb;
     --color-lightgold: #ffcc00;
     --color-darkgold: #d4a017;
     --color-bordeaux: #d94f4f;
     --color-indigo: #6b4fa7;
     --color-indigo-button: rgba(107, 79, 167, 0.8); /* Indigo avec transparence de 80 % */
-    --color-bg-black-tranp: rgba(0, 0, 0, 0.2);
-    --color-bg-white-tranp: rgba(255, 255, 255, 0.2);
-    --img-bg-light: url("../img/christmas_candle.jpg") no-repeat center center fixed;
 
-    --text-color: #111;
-    --bg-color: #f7f3f0;
+    --color-bg-transp: rgba(244, 236, 188, 0.4);
+    /*--img-bg-light: url("../img/christmas_candle.jpg") no-repeat center center fixed;*/
+
+    --text-color: var(--color-black);
+    --bg-color: var(--color-white);
 }
 
 /* Light mode variables */
 [data-theme="dark"] {
-    --color-black: #111;
+    --color-black: #333;
+    --color-white: #fffceb;
     --color-lightgold: #f4b52b;
     --color-darkgold: #bd6513;
     --color-bordeaux: #850000;
     --color-indigo: #402978;
     --color-indigo-button: rgba(64, 41, 120, 0.8); /* Indigo foncé avec transparence de 80 % */
-    --color-bg-black-tranp: rgba(255, 255, 255, 0.2);
-    --color-bg-white-tranp: rgba(0, 0, 0, 0.2);
-    --img-bg-dark: url("../img/many_candle_bg.jpg") no-repeat center center fixed;
+    --color-bg-transp: rgba(0, 0, 0, 0.2);
+    /*--img-bg-dark: url("../img/many_candle_bg.jpg") no-repeat center center fixed;*/
 
-    --text-color: antiquewhite;
+    --text-color: var(--color-white);
     --bg-color: var(--color-black);
 }
 
@@ -62,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Tangerine', cursive;
 }
 
-p, span, a, button {
+p, span, a, button, select {
     font-family: 'Agbalumo', sans-serif;
 }
 
@@ -82,8 +83,8 @@ button {
 }
 
 button:hover, a:hover {
-    background-color: var(--color-lightgold);
     transform: scale(1.05);
+    text-shadow: 1px 1px 10px var(--text-color);
 }
 
 /* Flamme en hover */
@@ -115,12 +116,12 @@ a:hover ~ .holder .flame:before {
     }
 
     body {
-        background: var(--img-bg-light);
+        background: var(--bg-color);
         background-size: cover;
     }
 
     body[data-theme="dark"] {
-        background: var(--img-bg-dark);
+        background: var(--bg-color);
         background-size: cover;
     }
 

@@ -4,12 +4,9 @@
     <BannerComp />
     <div class="wrapper">
       <CollectionsComp />
+      <SavoirFaireComp />
     </div>
-
-
-
     <footer class="footer">
-      <p>&copy; 2024 Figuier D'Or. Tous droits réservés.</p>
     </footer>
   </div>
 </template>
@@ -17,6 +14,7 @@
 <script setup>
 import CollectionsComp from "@/components/CollectionsComp.vue";
 import BannerComp from "@/components/BannerComp.vue";
+import SavoirFaireComp from "@/components/SavoirFaireComp.vue";
 </script>
 
 <style scoped>
