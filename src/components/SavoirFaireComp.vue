@@ -45,7 +45,7 @@ const videos = [
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-items: center;
 }
 

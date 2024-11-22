@@ -86,7 +86,16 @@ const toggleAnswer = (index) => {
   text-shadow: 2px 2px var(--color-black); /* Ombre douce et diffuse */
 }
 
-.faq-title1 {
+.faq-title2 {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--color-darkgold);
+  text-shadow: 2px 2px var(--color-black);
+}
+
+.faq-title2 {
   text-align: center;
   font-size: 2.3rem;
   font-weight: 600;
@@ -182,6 +191,10 @@ const toggleAnswer = (index) => {
     margin-bottom: 2rem;
   }
   .faq-title1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .faq-title2 {
     font-size: 4rem;
     margin-bottom: 2rem;
   }
