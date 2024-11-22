@@ -2,6 +2,7 @@
   <section class="faq">
     <h2 class="faq-title">Questions Fréquemment Posées</h2>
     <h2 class="faq-title1">Questions Fréquemment Posées</h2>
+    <h2 class="faq-title2">Questions Fréquemment Posées</h2>
     <div class="faq-list">
       <div v-for="(item, index) in faqItems" :key="index" class="faq-item">
         <button class="faq-question" @click="toggleAnswer(index)">
