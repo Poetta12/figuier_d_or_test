@@ -179,10 +179,11 @@ onBeforeUnmount(() => {
   .is-hovering .flame {
     height: 30px;
     width: 10px;
+    background: linear-gradient(blue 50%, cyan);
   }
 
   .is-hovering .flame:before {
-    box-shadow: 0 0 10px 0 rgba(247, 93, 0, 0.7), 0 -3px 2px 0 rgba(247, 128, 0, 0.9);
+    box-shadow: 0 0 10px 0 rgba(0, 128, 255, 0.7), 0 -3px 2px 0 rgba(0, 255, 255, 0.9);
   }
 
   /* Animations */
