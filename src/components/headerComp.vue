@@ -129,7 +129,7 @@ const updateTheme = (newTheme) => {
 
 .nav {
   position: relative;
-  border: 1px solid var(--color-lightgold);
+  border: 1px solid var(--color-footer-pg-title);
   border-radius: 10px;
   padding: 15px 0;
 }
@@ -157,7 +157,7 @@ const updateTheme = (newTheme) => {
 
 .nav-link {
   font-size: 1rem;
-  color: var(--color-lightgold);
+  color: var(--color-footer-pg-title);
   text-decoration: none;
   margin: 0.5rem 0;
   transition: color 0.3s ease;

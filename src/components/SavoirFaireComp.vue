@@ -16,9 +16,12 @@
 const videos = [
   "/videos/prep_order.mp4",
   "/videos/prep_order_2.mp4",
+  "/videos/snake.mp4",
+  "/videos/coeur.mp4",
+  "/videos/bougie_1.mp4",
+  "/videos/bougie_2.mp4",
 ];
 </script>
-
 
 <style scoped>
 /* Section principale */
