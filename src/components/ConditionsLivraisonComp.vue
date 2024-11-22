@@ -61,8 +61,9 @@
 <style scoped>
 .delivery-conditions {
   padding: 2rem 1rem;
-  background: linear-gradient(145deg, var(--color-white), var(--color-bg-transp));
+  background: linear-gradient(130deg, var(--color-black), var(--color-bg-transp));
   color: var(--text-color);
+
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
