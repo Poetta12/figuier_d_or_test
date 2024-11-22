@@ -1,9 +1,6 @@
 <template>
   <section class="faq">
     <h2 class="faq-title">Questions Fréquemment Posées</h2>
-    <h2 class="faq-title1">Questions Fréquemment Posées</h2>
-    <h2 class="faq-title2">Questions Fréquemment Posées</h2>
-    <h2 class="faq-title3">Questions Fréquemment Posées</h2>
     <div class="faq-list">
       <div v-for="(item, index) in faqItems" :key="index" class="faq-item">
         <button class="faq-question" @click="toggleAnswer(index)">
@@ -84,33 +81,7 @@ const toggleAnswer = (index) => {
   font-size: 2.3rem;
   font-weight: 600;
   margin-bottom: 1.2rem;
-  color: var(--color-lightgold);
-  text-shadow: 2px 2px var(--color-black); /* Ombre douce et diffuse */
-}
-
-.faq-title1 {
-  text-align: center;
-  font-size: 2.3rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-  color: var(--color-darkgold);
-  text-shadow: 2px 2px var(--color-black);
-}
-
-.faq-title2 {
-  text-align: center;
-  font-size: 2.3rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-  color: var(--color-bordeaux);
-}
-
-.faq-title3 {
-  text-align: center;
-  font-size: 2.3rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-  color: var(--color-darkgold);
+  color: var(--color-footer-pg-title);
 }
 
 /* Liste des items */
@@ -197,18 +168,6 @@ const toggleAnswer = (index) => {
   }
 
   .faq-title {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-  }
-  .faq-title1 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-  }
-  .faq-title2 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-  }
-  .faq-title3 {
     font-size: 4rem;
     margin-bottom: 2rem;
   }
