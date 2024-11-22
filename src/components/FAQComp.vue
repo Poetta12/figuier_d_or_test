@@ -83,7 +83,7 @@ const toggleAnswer = (index) => {
   font-weight: 600;
   margin-bottom: 1.2rem;
   color: var(--color-lightgold);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Ombre douce et diffuse */
+  text-shadow: 2px 2px var(--color-black); /* Ombre douce et diffuse */
 }
 
 .faq-title1 {

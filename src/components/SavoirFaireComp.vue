@@ -42,8 +42,9 @@ const videos = [
 
 /* Liste de vidéos */
 .video-list {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   justify-items: center;
 }
