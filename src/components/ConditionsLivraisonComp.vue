@@ -59,39 +59,43 @@
 </script>
 
 <style scoped>
+/* Mobile-first styles */
+
+/* Section principale */
 .delivery-conditions {
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   background: var(--color-bg-transp);
   color: var(--text-color);
-
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
+  gap: 1.5rem;
+  margin: 1.5rem auto;
 }
 
+/* Titre de la section */
 .section-title {
   text-align: center;
-  font-size: 4rem;
+  font-size: 2rem;
   font-family: 'Tangerine', cursive;
   font-weight: bold;
-  color: var(--color-bordeaux);
-  margin-bottom: 1.5rem;
+  color: var(--color-footer-pg-title);
+  margin-bottom: 1.2rem;
 }
 
+/* Wrapper principal */
 .delivery-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
+/* Texte */
 .delivery-text {
   flex: 1;
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .delivery-list {
@@ -101,21 +105,21 @@
 }
 
 .delivery-list li {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  font-size: 1rem;
+  gap: 0.5rem;
+  font-size: 0.9rem;
   color: var(--text-color);
 }
 
 .delivery-list li i {
-  padding-right: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--color-lightgold);
+  margin-right: 0.5rem;
 }
 
+/* Image */
 .delivery-image {
   flex: 1;
   display: flex;
@@ -126,18 +130,59 @@
 .delivery-image img {
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .delivery-image img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Responsive styles */
+
+/* Tablettes (min-width: 768px) */
 @media (min-width: 768px) {
+  .delivery-conditions {
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
   .delivery-wrapper {
     flex-direction: row;
+    gap: 2rem;
+  }
+
+  .delivery-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .delivery-list li {
+    font-size: 1rem;
+  }
+
+  .delivery-list li i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .delivery-conditions {
+    max-width: 1200px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .delivery-wrapper {
     gap: 3rem;
   }
 

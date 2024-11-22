@@ -45,42 +45,44 @@
 </script>
 
 <style scoped>
+/* Mobile-first styles */
+
 /* Section principale */
 .eco-commitment {
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   background: var(--color-bg-transp);
   color: var(--text-color);
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
+  gap: 1.5rem;
+  margin: 1.5rem auto;
 }
 
 /* Titre principal */
 .eco-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: 'Tangerine', cursive;
   font-weight: bold;
-  color: var(--color-bordeaux);
-  margin-bottom: 1.5rem;
+  color: var(--color-footer-pg-title);
+  margin-bottom: 1rem;
 }
 
 /* Wrapper de contenu */
 .eco-wrapper > p {
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
   color: var(--text-color);
 }
 
 .eco-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 /* Contenu texte */
@@ -95,22 +97,22 @@
 }
 
 .eco-group li {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .icon-group {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .icon-group i {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--color-lightgold);
 }
 
@@ -125,28 +127,64 @@
 .eco-image img {
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .eco-image img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Styles */
+
+/* Tablettes (min-width: 768px) */
 @media (min-width: 768px) {
+  .eco-commitment {
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+
+  .eco-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .eco-wrapper > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
   .eco-content {
     flex-direction: row;
+    gap: 2rem;
+  }
+
+  .eco-group li {
+    font-size: 1rem;
+  }
+
+  .icon-group i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .eco-commitment {
+    max-width: 1200px;
+  }
+
+  .eco-title {
+    font-size: 3rem;
+  }
+
+  .eco-wrapper > p {
+    font-size: 1.2rem;
+  }
+
+  .eco-content {
     gap: 3rem;
-  }
-
-  .eco-text {
-    flex: 2;
-  }
-
-  .eco-image {
-    flex: 1;
   }
 }
 </style>
