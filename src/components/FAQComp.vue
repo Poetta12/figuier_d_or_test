@@ -1,6 +1,7 @@
 <template>
   <section class="faq">
     <h2 class="faq-title">Questions Fréquemment Posées</h2>
+    <h2 class="faq-title1">Questions Fréquemment Posées</h2>
     <div class="faq-list">
       <div v-for="(item, index) in faqItems" :key="index" class="faq-item">
         <button class="faq-question" @click="toggleAnswer(index)">
@@ -64,30 +65,43 @@ const toggleAnswer = (index) => {
 </script>
 
 <style scoped>
+/* Conteneur principal FAQ */
 .faq {
-  padding: 2rem;
+  padding: 1.5rem 1rem;
   background: var(--bg-color);
   color: var(--text-color);
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
   margin: auto;
 }
 
+/* Titre */
 .faq-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   color: var(--color-lightgold);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Ombre douce et diffuse */
 }
 
+.faq-title1 {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--color-bordeaux);
+}
+
+/* Liste des items */
 .faq-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+/* Chaque question */
 .faq-item {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -96,17 +110,18 @@ const toggleAnswer = (index) => {
 }
 
 .faq-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
 
+/* Bouton question */
 .faq-question {
   width: 100%;
   text-align: left;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   background: var(--color-indigo);
   color: var(--color-lightgold);
-  font-size: 1rem;
+  font-size: 0.95rem;
   border: none;
   display: flex;
   justify-content: space-between;
@@ -119,15 +134,65 @@ const toggleAnswer = (index) => {
   background: var(--color-darkgold);
 }
 
+/* Icône (+/-) */
 .faq-icon {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
+/* Réponse */
 .faq-answer {
-  padding: 1rem;
-  background: var(--color-bg-transp);
+  padding: 0.8rem 1rem;
+  background: var(--bg-color);
   color: var(--text-color);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.5;
 }
+
+/* Responsive styles */
+
+/* Tablettes (min-width: 768px) */
+@media (min-width: 768px) {
+  .faq {
+    padding: 2rem;
+    max-width: 90%;
+  }
+
+  .faq-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .faq {
+    max-width: 800px;
+  }
+
+  .faq-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .faq-title1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+  }
+}
 </style>
+
