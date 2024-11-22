@@ -2,9 +2,20 @@
   <section class="savoir-faire">
     <h2 class="section-title">Notre Savoir-Faire</h2>
     <div class="video-list">
-      <div v-for="(video, index) in videos" :key="index" class="video-item">
+      <div
+        v-for="(video, index) in videos"
+        :key="index"
+        class="video-item"
+      >
         <div class="video-content">
-          <video class="video-player" controls :src="video" :alt="'Vidéo ' + (index + 1)"></video>
+          <video
+            ref="videoRefs"
+            class="video-player"
+            controls
+            :src="video"
+            :alt="'Vidéo ' + (index + 1)"
+            @play="handlePlay(index)"
+          ></video>
         </div>
         <p class="video-title">Vidéo {{ index + 1 }}</p>
       </div>
@@ -12,7 +23,10 @@
   </section>
 </template>
 
+
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
 const videos = [
   "/videos/prep_order.mp4",
   "/videos/prep_order_2.mp4",
@@ -21,7 +35,22 @@ const videos = [
   "/videos/bougie_1.mp4",
   "/videos/bougie_2.mp4",
 ];
+
+const videoRefs = ref([]);
+
+const handlePlay = (index) => {
+  videoRefs.value.forEach((video, i) => {
+    if (i !== index && video) {
+      video.pause(); // Arrête toutes les autres vidéos
+    }
+  });
+};
+
+onUnmounted(() => {
+  videoRefs.value = [];
+});
 </script>
+
 
 <style scoped>
 /* Section principale */
