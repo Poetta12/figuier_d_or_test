@@ -3,7 +3,7 @@
     <div class="footer-container">
       <!-- Logo et slogan -->
       <div class="footer-brand">
-        <img src="/logos/logo_2-removebg.png" alt="Figuier d'Or" class="footer-logo" />
+        <img src="/logos/logo_wh_big.png" alt="Figuier d'Or" class="footer-logo" />
         <p class="footer-slogan">"La lumière qui illumine vos moments précieux"</p>
       </div>
 
@@ -226,6 +226,9 @@
   }
 
   .footer-brand {
+    display:flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     flex: 1 1 100%;
   }

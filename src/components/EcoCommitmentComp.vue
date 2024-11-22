@@ -63,7 +63,7 @@
 /* Titre principal */
 .eco-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-family: 'Tangerine', cursive;
   font-weight: bold;
   color: var(--color-footer-pg-title);
@@ -176,7 +176,7 @@
   }
 
   .eco-title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .eco-wrapper > p {

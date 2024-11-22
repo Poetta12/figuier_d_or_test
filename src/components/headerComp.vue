@@ -8,7 +8,7 @@
       <router-link to="/" class="logo-link">
         <img
           class="logo"
-          :src="theme === 'dark' ? '/logos/logo_2-removebg.png' : '/logos/logo-removebg.png'"
+          :src="theme === 'dark' ? '/logos/logo_wh_big.png' : '/logos/logo_bk_big.png'"
           alt="Figuier D'Or"
         />
       </router-link>

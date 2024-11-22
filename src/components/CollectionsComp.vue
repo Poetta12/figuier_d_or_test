@@ -82,9 +82,8 @@ const collections = [
 
 .section-title {
   font-size: 6rem;
-  color: var(--color-lightgold);
+  color: var(--color-bordeaux);
   margin-bottom: 1.5rem;
-  text-shadow: 2px 2px var(--color-black);
 }
 
 .collection-list {

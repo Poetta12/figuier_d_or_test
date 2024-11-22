@@ -179,7 +179,7 @@
   }
 
   .section-title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .delivery-wrapper {
