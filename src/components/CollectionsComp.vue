@@ -145,7 +145,6 @@ const collections = [
   border: none;
   border-radius: 5px;
   padding: 0.7rem 1rem;
-  cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }

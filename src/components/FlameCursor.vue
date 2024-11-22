@@ -106,7 +106,6 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-
 @media (min-width: 1024px) {
   /* Conteneur principal */
   .holder {
@@ -161,10 +160,8 @@ onBeforeUnmount(() => {
     border-radius: 50% 50% 20% 20%;
     background: linear-gradient(white 80%, transparent);
     animation: enlargeFlame 2s linear infinite;
-    /* Transition fluide pour les transformations */
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 0.3s ease; /* Transition fluide */
   }
-
 
   .flame:before {
     content: "";
@@ -172,7 +169,9 @@ onBeforeUnmount(() => {
     width: 100%;
     height: 100%;
     border-radius: 50% 50% 20% 20%;
-    box-shadow: 0 0 5px 0 rgba(247, 93, 0, 0.4), 0 -2px 1px 0 rgba(247, 128, 0, 0.7);
+    box-shadow: 0 0 5px 0 rgba(247, 93, 0, 0.4),
+    0 -2px 1px 0 rgba(247, 128, 0, 0.7);
+    transition: box-shadow 0.3s ease; /* Transition fluide pour l'effet lumineux */
   }
 
   /* Flamme agrandie en hover */
@@ -200,6 +199,12 @@ onBeforeUnmount(() => {
     background: #ff6000;
     filter: blur(12px); /* Réduction du flou */
     animation: blinkIt 0.1s infinite;
+    transition: background 0.3s ease, filter 0.3s ease; /* Transition pour la lueur */
+  }
+
+  .is-hovering .blinking-glow {
+    background: #ff4500; /* Lueur orange/rouge */
+    filter: blur(8px); /* Flou réduit pour effet net */
   }
 }
 
@@ -209,3 +214,4 @@ onBeforeUnmount(() => {
   }
 }
 </style>
+
