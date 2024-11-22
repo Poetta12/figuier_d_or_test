@@ -87,7 +87,7 @@ const toggleAnswer = (index) => {
   text-shadow: 2px 2px var(--color-black); /* Ombre douce et diffuse */
 }
 
-.faq-title2 {
+.faq-title1 {
   text-align: center;
   font-size: 2.3rem;
   font-weight: 600;
