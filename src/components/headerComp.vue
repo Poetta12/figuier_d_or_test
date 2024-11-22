@@ -4,12 +4,14 @@
       <!-- Bouton Toggle Light/Dark -->
       <BougieComp @toggleTheme="updateTheme" />
 
-      <!-- Logo -->
-      <img
-        class="logo"
-        :src="theme === 'dark' ? '/logos/logo_2-removebg.png' : '/logos/logo-removebg.png'"
-        alt="Figuier D'Or"
-      />
+      <!-- Logo avec lien vers l'accueil -->
+      <router-link to="/" class="logo-link">
+        <img
+          class="logo"
+          :src="theme === 'dark' ? '/logos/logo_2-removebg.png' : '/logos/logo-removebg.png'"
+          alt="Figuier D'Or"
+        />
+      </router-link>
 
       <!-- Navigation -->
       <nav class="nav">
