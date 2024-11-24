@@ -14,10 +14,9 @@
         :images="product.images"
         :name="product.name"
         :description="product.description"
-        :category="product.category"
+        :category="product.category || 'Bougies Artisanales'"
         :color="product.color"
         :price="product.price"
-        :fragrances="product.fragrances || []"
         :buttonText="'Découvrir'"
         @actionClick="showDetails(product)"
       />
