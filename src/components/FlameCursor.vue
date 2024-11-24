@@ -75,35 +75,51 @@ const updateCursor = (event) => {
 };
 
 // Activer/désactiver l'état de hover
-const handleHover = () => {
+const handleHover = (event) => {
   isHovering.value = true;
+  console.log("Hovering on:", event.target);
 };
 
 const handleHoverOut = () => {
   isHovering.value = false;
+  console.log("Hover out");
 };
 
 // Ajouter les écouteurs pour suivre les interactions
 onMounted(() => {
   window.addEventListener("mousemove", updateCursor);
 
-  // Ajouter des écouteurs pour tous les boutons et liens
-  document.querySelectorAll("button, a").forEach((el) => {
-    el.addEventListener("mouseenter", handleHover);
-    el.addEventListener("mouseleave", handleHoverOut);
+  // Ajouter les écouteurs de manière dynamique via le délégateur d'événements
+  document.body.addEventListener("mouseover", (event) => {
+    if (
+      event.target.matches("button") ||
+      event.target.matches("a") ||
+      event.target.matches(".hoverable")
+    ) {
+      handleHover(event);
+    }
+  });
+
+  document.body.addEventListener("mouseout", (event) => {
+    if (
+      event.target.matches("button") ||
+      event.target.matches("a") ||
+      event.target.matches(".hoverable")
+    ) {
+      handleHoverOut(event);
+    }
   });
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("mousemove", updateCursor);
 
-  // Retirer les écouteurs pour les boutons et liens
-  document.querySelectorAll("button, a").forEach((el) => {
-    el.removeEventListener("mouseenter", handleHover);
-    el.removeEventListener("mouseleave", handleHoverOut);
-  });
+  // Retirer les écouteurs d'événements globaux
+  document.body.removeEventListener("mouseover", handleHover);
+  document.body.removeEventListener("mouseout", handleHoverOut);
 });
 </script>
+
 
 <style scoped>
 @media (min-width: 1024px) {

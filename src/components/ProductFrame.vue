@@ -1,25 +1,33 @@
 <template>
   <div class="product-frame">
-    <!-- Image -->
+    <!-- Galerie d'images -->
     <div class="image-container">
-      <img class="product-image" :src="image" :alt="name" />
+      <img
+        v-for="(img, index) in (Array.isArray(images) ? images : [images])"
+        :key="index"
+        class="product-image"
+        :src="img"
+        :alt="`${name || 'Image du produit'} (${index + 1})`"
+      />
     </div>
 
     <!-- Détails du produit -->
     <div class="product-details">
       <h2 class="product-name">{{ name }}</h2>
-      <p class="product-description">{{ description }}</p>
 
       <!-- Meta informations -->
       <div class="product-meta">
         <p><strong>Catégorie :</strong> {{ category }}</p>
         <p><strong>Couleur :</strong> {{ color }}</p>
-        <p><strong>Prix :</strong> {{ price }} €</p>
+        <p><strong>Prix :</strong> {{ price.toFixed(2) }} €</p>
+        <p v-if="Array.isArray(fragrances) && fragrances.length">
+          <strong>Parfums :</strong> {{ fragrances.join(", ") }}
+        </p>
       </div>
     </div>
 
     <!-- Bouton d'action -->
-    <button class="product-button" @click="onActionClick">{{ buttonText }}</button>
+    <button class="product-button hoverable" @click="onActionClick">{{ buttonText }}</button>
   </div>
 </template>
 
@@ -28,13 +36,14 @@ import { defineProps, defineEmits } from "vue";
 
 // Props pour personnaliser le produit
 defineProps({
-  image: { type: String, required: true },
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  category: { type: String, required: true },
-  color: { type: String, required: true },
-  price: { type: Number, required: true },
-  buttonText: { type: String, default: "Découvrir" },
+  images: { type: Array, required: true }, // Liste des images
+  name: { type: String, required: true }, // Nom du produit
+  description: { type: String, required: true }, // Description
+  category: { type: String, required: true }, // Catégorie
+  color: { type: String, required: true }, // Couleur
+  price: { type: Number, required: true }, // Prix
+  fragrances: { type: Array, default: () => [] }, // Parfums
+  buttonText: { type: String, default: "Découvrir" } // Texte du bouton
 });
 
 // Événement d'action pour le bouton
@@ -75,6 +84,8 @@ const onActionClick = () => {
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.6);
 }
 
@@ -202,4 +213,3 @@ const onActionClick = () => {
   }
 }
 </style>
-

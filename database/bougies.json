@@ -1,362 +1,410 @@
 [
-  {
-    "id": 1,
-    "name": "Bougie Bougies parfumées 1",
-    "description": "Description de la bougie Bougies parfumées 1.",
-    "image": "/bougies/B10.jpg",
-    "category": "Bougies parfumées",
-    "color": "Rouge",
-    "price": 15
-  },
-  {
-    "id": 2,
-    "name": "Bougie Bougies LED 2",
-    "description": "Description de la bougie Bougies LED 2.",
-    "image": "/bougies/B11.jpg",
-    "category": "Bougies LED",
-    "color": "Vert",
-    "price": 18
-  },
-  {
-    "id": 3,
-    "name": "Bougie Bougies moulées 3",
-    "description": "Description de la bougie Bougies moulées 3.",
-    "image": "/bougies/B12.jpg",
-    "category": "Bougies moulées",
-    "color": "Bleu",
-    "price": 20
-  },
-  {
-    "id": 4,
-    "name": "Bougie Bougies parfumées 4",
-    "description": "Description de la bougie Bougies parfumées 4.",
-    "image": "/bougies/B13.jpg",
-    "category": "Bougies parfumées",
-    "color": "Noir",
-    "price": 22
-  },
-  {
-    "id": 5,
-    "name": "Bougie Bougies LED 5",
-    "description": "Description de la bougie Bougies LED 5.",
-    "image": "/bougies/B15.jpg",
-    "category": "Bougies LED",
-    "color": "Blanc",
-    "price": 25
-  },
-  {
-    "id": 6,
-    "name": "Bougie Bougies moulées 6",
-    "description": "Description de la bougie Bougies moulées 6.",
-    "image": "/bougies/B10.jpg",
-    "category": "Bougies moulées",
-    "color": "Rouge",
-    "price": 27
-  },
-  {
-    "id": 7,
-    "name": "Bougie Bougies parfumées 7",
-    "description": "Description de la bougie Bougies parfumées 7.",
-    "image": "/bougies/B11.jpg",
-    "category": "Bougies parfumées",
-    "color": "Vert",
-    "price": 30
-  },
-  {
-    "id": 8,
-    "name": "Bougie Bougies LED 8",
-    "description": "Description de la bougie Bougies LED 8.",
-    "image": "/bougies/B12.jpg",
-    "category": "Bougies LED",
-    "color": "Bleu",
-    "price": 12
-  },
-  {
-    "id": 9,
-    "name": "Bougie Bougies moulées 9",
-    "description": "Description de la bougie Bougies moulées 9.",
-    "image": "/bougies/B13.jpg",
-    "category": "Bougies moulées",
-    "color": "Noir",
-    "price": 15
-  },
-  {
-    "id": 10,
-    "name": "Bougie Bougies parfumées 10",
-    "description": "Description de la bougie Bougies parfumées 10.",
-    "image": "/bougies/B15.jpg",
-    "category": "Bougies parfumées",
-    "color": "Blanc",
-    "price": 18
-  },
-  {
-    "id": 11,
-    "name": "Bougie Bougies LED 11",
-    "description": "Description de la bougie Bougies LED 11.",
-    "image": "/bougies/B10.jpg",
-    "category": "Bougies LED",
-    "color": "Rouge",
-    "price": 20
-  },
-  {
-    "id": 12,
-    "name": "Bougie Bougies moulées 12",
-    "description": "Description de la bougie Bougies moulées 12.",
-    "image": "/bougies/B11.jpg",
-    "category": "Bougies moulées",
-    "color": "Vert",
-    "price": 22
-  },
-  {
-    "id": 13,
-    "name": "Bougie Bougies parfumées 13",
-    "description": "Description de la bougie Bougies parfumées 13.",
-    "image": "/bougies/B12.jpg",
-    "category": "Bougies parfumées",
-    "color": "Bleu",
-    "price": 25
-  },
-  {
-    "id": 14,
-    "name": "Bougie Bougies LED 14",
-    "description": "Description de la bougie Bougies LED 14.",
-    "image": "/bougies/B13.jpg",
-    "category": "Bougies LED",
-    "color": "Noir",
-    "price": 27
-  },
-  {
-    "id": 15,
-    "name": "Bougie Bougies moulées 15",
-    "description": "Description de la bougie Bougies moulées 15.",
-    "image": "/bougies/B15.jpg",
-    "category": "Bougies moulées",
-    "color": "Blanc",
-    "price": 30
-  },
-  {
-    "id": 16,
-    "name": "Bougie Bougies parfumées 16",
-    "description": "Description de la bougie Bougies parfumées 16.",
-    "image": "/bougies/B10.jpg",
-    "category": "Bougies parfumées",
-    "color": "Rouge",
-    "price": 12
-  },
-  {
-    "id": 17,
-    "name": "Bougie Bougies LED 17",
-    "description": "Description de la bougie Bougies LED 17.",
-    "image": "/bougies/B11.jpg",
-    "category": "Bougies LED",
-    "color": "Vert",
-    "price": 15
-  },
-  {
-    "id": 18,
-    "name": "Bougie Bougies moulées 18",
-    "description": "Description de la bougie Bougies moulées 18.",
-    "image": "/bougies/B12.jpg",
-    "category": "Bougies moulées",
-    "color": "Bleu",
-    "price": 18
-  },
-  {
-    "id": 19,
-    "name": "Bougie Bougies parfumées 19",
-    "description": "Description de la bougie Bougies parfumées 19.",
-    "image": "/bougies/B13.jpg",
-    "category": "Bougies parfumées",
-    "color": "Noir",
-    "price": 20
-  },
-  {
-    "id": 20,
-    "name": "Bougie Bougies LED 20",
-    "description": "Description de la bougie Bougies LED 20.",
-    "image": "/bougies/B15.jpg",
-    "category": "Bougies LED",
-    "color": "Blanc",
-    "price": 22
-  },
-  {
-    "id": 21,
-    "name": "Bougie Bougies moulées 21",
-    "description": "Description de la bougie Bougies moulées 21.",
-    "image": "/bougies/B10.jpg",
-    "category": "Bougies moulées",
-    "color": "Rouge",
-    "price": 25
-  },
-  {
-    "id": 22,
-    "name": "Bougie Bougies parfumées 22",
-    "description": "Description de la bougie Bougies parfumées 22.",
-    "image": "/bougies/B11.jpg",
-    "category": "Bougies parfumées",
-    "color": "Vert",
-    "price": 27
-  },
-  {
-    "id": 23,
-    "name": "Bougie Bougies LED 23",
-    "description": "Description de la bougie Bougies LED 23.",
-    "image": "/bougies/B12.jpg",
-    "category": "Bougies LED",
-    "color": "Bleu",
-    "price": 30
-  },
-  {
-    "id": 24,
-    "name": "Bougie Bougies moulées 24",
-    "description": "Description de la bougie Bougies moulées 24.",
-    "image": "/bougies/B13.jpg",
-    "category": "Bougies moulées",
-    "color": "Noir",
-    "price": 12
-  },
-  {
-    "id": 25,
-    "name": "Bougie Bougies parfumées 25",
-    "description": "Description de la bougie Bougies parfumées 25.",
-    "image": "/bougies/B15.jpg",
-    "category": "Bougies parfumées",
-    "color": "Blanc",
-    "price": 15
-  },
-  {
-    "id": 26,
-    "name": "Bougie Bougies LED 26",
-    "description": "Description de la bougie Bougies LED 26.",
-    "image": "/bougies/B10.jpg",
-    "category": "Bougies LED",
-    "color": "Rouge",
-    "price": 18
-  },
-  {
-    "id": 27,
-    "name": "Bougie Bougies moulées 27",
-    "description": "Description de la bougie Bougies moulées 27.",
-    "image": "/bougies/B11.jpg",
-    "category": "Bougies moulées",
-    "color": "Vert",
-    "price": 20
-  },
-  {
-    "id": 28,
-    "name": "Bougie Bougies parfumées 28",
-    "description": "Description de la bougie Bougies parfumées 28.",
-    "image": "/bougies/B12.jpg",
-    "category": "Bougies parfumées",
-    "color": "Bleu",
-    "price": 22
-  },
-  {
-    "id": 29,
-    "name": "Bougie Bougies LED 29",
-    "description": "Description de la bougie Bougies LED 29.",
-    "image": "/bougies/B13.jpg",
-    "category": "Bougies LED",
-    "color": "Noir",
-    "price": 25
-  },
-  {
-    "id": 30,
-    "name": "Bougie Bougies moulées 30",
-    "description": "Description de la bougie Bougies moulées 30.",
-    "image": "/bougies/B15.jpg",
-    "category": "Bougies moulées",
-    "color": "Blanc",
-    "price": 27
-  },
-  {
-    "id": 31,
-    "name": "Bougie Bougies parfumées 31",
-    "description": "Description de la bougie Bougies parfumées 31.",
-    "image": "/bougies/B10.jpg",
-    "category": "Bougies parfumées",
-    "color": "Rouge",
-    "price": 30
-  },
-  {
-    "id": 32,
-    "name": "Bougie Bougies LED 32",
-    "description": "Description de la bougie Bougies LED 32.",
-    "image": "/bougies/B11.jpg",
-    "category": "Bougies LED",
-    "color": "Vert",
-    "price": 12
-  },
-  {
-    "id": 33,
-    "name": "Bougie Bougies moulées 33",
-    "description": "Description de la bougie Bougies moulées 33.",
-    "image": "/bougies/B12.jpg",
-    "category": "Bougies moulées",
-    "color": "Bleu",
-    "price": 15
-  },
-  {
-    "id": 34,
-    "name": "Bougie Bougies parfumées 34",
-    "description": "Description de la bougie Bougies parfumées 34.",
-    "image": "/bougies/B13.jpg",
-    "category": "Bougies parfumées",
-    "color": "Noir",
-    "price": 18
-  },
-  {
-    "id": 35,
-    "name": "Bougie Bougies LED 35",
-    "description": "Description de la bougie Bougies LED 35.",
-    "image": "/bougies/B15.jpg",
-    "category": "Bougies LED",
-    "color": "Blanc",
-    "price": 20
-  },
-  {
-    "id": 36,
-    "name": "Bougie Bougies moulées 36",
-    "description": "Description de la bougie Bougies moulées 36.",
-    "image": "/bougies/B10.jpg",
-    "category": "Bougies moulées",
-    "color": "Rouge",
-    "price": 22
-  },
-  {
-    "id": 37,
-    "name": "Bougie Bougies parfumées 37",
-    "description": "Description de la bougie Bougies parfumées 37.",
-    "image": "/bougies/B11.jpg",
-    "category": "Bougies parfumées",
-    "color": "Vert",
-    "price": 25
-  },
-  {
-    "id": 38,
-    "name": "Bougie Bougies LED 38",
-    "description": "Description de la bougie Bougies LED 38.",
-    "image": "/bougies/B12.jpg",
-    "category": "Bougies LED",
-    "color": "Bleu",
-    "price": 27
-  },
-  {
-    "id": 39,
-    "name": "Bougie Bougies moulées 39",
-    "description": "Description de la bougie Bougies moulées 39.",
-    "image": "/bougies/B13.jpg",
-    "category": "Bougies moulées",
-    "color": "Noir",
-    "price": 30
-  },
-  {
-    "id": 40,
-    "name": "Bougie Bougies parfumées 40",
-    "description": "Description de la bougie Bougies parfumées 40.",
-    "image": "/bougies/B15.jpg",
-    "category": "Bougies parfumées",
-    "color": "Blanc",
-    "price": 12
-  }
+    {
+        "name": "Bougie parfumée 400g",
+        "category": "Bougie parfumée",
+        "price": 42.5,
+        "fragances": [
+            "Lavande",
+            "Monoï",
+            "Figue",
+            "Sapin",
+            "Eucalyptus"
+        ],
+        "color": "Blanc de base",
+        "images": ["/img/produits/bougie_parfumee.jpeg"],
+        "description": "Bougie parfumée 400g: Cette bougie de 42.5g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
+    },
+    {
+        "name": "Bougie parfumée 250g",
+        "category": "Bougie parfumée",
+        "price": 25,
+        "fragances": [
+            "Lavande",
+            "Monoï",
+            "Figue",
+            "Sapin",
+            "Eucalyptus"
+        ],
+        "color": "Blanc de base",
+        "images": ["/img/produits/bougie_parfumee.jpeg"],
+        "description": "Bougie parfumée 250g: Cette bougie de 25g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
+    },
+    {
+        "name": "Bougie parfumée 150g",
+        "category": "Bougie parfumée",
+        "price": 16.5,
+        "fragances": [
+            "Lavande",
+            "Monoï",
+            "Figue",
+            "Sapin",
+            "Eucalyptus"
+        ],
+        "color": "Blanc de base",
+        "images": ["/img/produits/bougie_parfumee.jpeg"],
+        "description": "Bougie parfumée 150g: Cette bougie de 16.5g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
+    },
+    {
+        "name": "Bougie parfumée 50g",
+        "category": "Bougie parfumée",
+        "price": 13.5,
+        "fragances": [
+            "Lavande",
+            "Monoï",
+            "Figue",
+            "Sapin",
+            "Eucalyptus"
+        ],
+        "color": "Blanc de base",
+        "images": ["/img/produits/bougie_parfumee.jpeg"],
+        "description": "Bougie parfumée 50g: Cette bougie de 13.5g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
+    },
+    {
+        "name": "Ours",
+        "category": "Bougie moulée",
+        "price": 8.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/Ours.jpg",
+            "/img/produits/ours2.jpg"
+        ],
+        "description": "Ours: Une bougie en forme d'ours, idéale pour apporter une touche ludique et charmante à votre décoration. Parfaite pour les chambres d'enfants ou comme cadeau original."
+    },
+    {
+        "name": "Corps de femme avec T-shirt",
+        "category": "Bougie moulée",
+        "price": 10,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/corps_de_femme_avec_t-shirt.jpg",
+            "/img/produits/corps_de_femme_avec_t-shirt2.jpg"
+        ],
+        "description": "Corps de femme avec T-shirt: Une bougie élégante représentant un corps de femme, parfaite pour une décoration artistique et moderne. Fabriquée en cire blanche de qualité."
+    },
+    {
+        "name": "Torse d'homme",
+        "category": "Bougie moulée",
+        "price": 12,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/corps_d_homme.jpg",
+            "/img/produits/corps_d_homme2.jpg"
+        ],
+        "description": "Torse dhomme: Une bougie raffinée en forme de torse, parfaite pour apporter une touche de sophistication à votre espace."
+    },
+    {
+        "name": "Torse de femme",
+        "category": "Bougie moulée",
+        "price": 12,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/torse_de_femme.jpg",
+            "/img/produits/torse_de_femme2.jpg"
+        ],
+        "description": "Torse femme: Une bougie raffinée en forme de torse, parfaite pour apporter une touche de sophistication à votre espace."
+    },
+    {
+        "name": "Serpent à tête de Rose",
+        "category": "Bougie moulée",
+        "price": 16.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/serpent_a_tete_de_rose.jpg"],
+        "description": "Serpent à tête de Rose: Une bougie au design unique représentant un serpent, idéale pour une décoration audacieuse et originale."
+    },
+    {
+        "name": "Coeur dans les mains",
+        "category": "Bougie moulée",
+        "price": 12,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/coeur_dans_les_mains.jpg",
+            "/img/produits/coeur_dans_les_mains2.jpg"
+        ],
+        "description": "Coeur dans les mains: Une bougie en forme de cœur, parfaite pour exprimer vos sentiments ou décorer un moment romantique."
+    },
+    {
+        "name": "Cylindre ondulé",
+        "category": "Bougie moulée",
+        "price": 10.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/cylindre_ondule.jpg",
+            "/img/produits/cylindre_ondule2.jpg"
+        ],
+        "description": "Cylindre ondulé: Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
+    },
+    {
+        "name": "Cylindre patte de chien",
+        "category": "Bougie moulée",
+        "price": 10,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/cylindre_patte_de_chien.jpg",
+            "/img/produits/cylindre_patte_de_chien2.jpg"
+        ],
+        "description": "Cylindre patte de chien: Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
+    },
+    {
+        "name": "Cylindre coeur",
+        "category": "Bougie moulée",
+        "price": 10,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/cylindre_coeur.jpg",
+            "/img/produits/cylindre_coeur2.jpg"
+        ],
+        "description": "Cylindre coeur: Une bougie en forme de cœur, parfaite pour exprimer vos sentiments ou décorer un moment romantique."
+    },
+    {
+        "name": "Cylindre octogonal",
+        "category": "Bougie moulée",
+        "price": 11,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/cylindre_octogonale.jpg",
+            "/img/produits/cylindre_octogonale2.jpg"
+        ],
+        "description": "Cylindre octogonal: Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
+    },
+    {
+        "name": "Cylindre avec des vagues",
+        "category": "Bougie moulée",
+        "price": 18.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/cylindre_avec_des_vagues.jpg",
+            "/img/produits/cylindre_avec_des_vagues2.jpg"
+        ],
+        "description": "Cylindre avec des vagues: Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
+    },
+    {
+        "name": "Bougie à bulle",
+        "category": "Bougie moulée",
+        "price": 18.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/bougie_a_bulle.jpg"],
+        "description": "Bougie à bulle: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Cube de diamant",
+        "category": "Bougie moulée",
+        "price": 10,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/cube_de_diamant.jpg"],
+        "description": "Cube de diamant: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Pomme de pain",
+        "category": "Bougie moulée",
+        "price": 11,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/pomme_de_pain.jpg"],
+        "description": "Pomme de pain: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Botte de Noel",
+        "category": "Bougie moulée",
+        "price": 13.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/botte_de_noel.jpg"],
+        "description": "Botte de Noel: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Cloche de Noel",
+        "category": "Bougie moulée",
+        "price": 13.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/cloche_de_noel.jpg"],
+        "description": "Cloche de Noel: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Bonhomme de neige",
+        "category": "Bougie moulée",
+        "price": 8,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/bonhomme_de_neige.jpg"],
+        "description": "Bonhomme de neige: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Gnôme Couronne",
+        "category": "Bougie moulée",
+        "price": 8,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/gnome_couronne.jpg"],
+        "description": "Gnôme Couronne: Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
+    },
+    {
+        "name": "Cerf en forêt",
+        "category": "Bougie moulée",
+        "price": 15.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/cerf_en_foret.jpg"],
+        "description": "Cerf en forêt: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Gnôme trèfle",
+        "category": "Bougie moulée",
+        "price": 9,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/gnome_trèfle.jpg"],
+        "description": "Gnôme trèfle: Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
+    },
+    {
+        "name": "ours tête à lenvers",
+        "category": "Bougie moulée",
+        "price": 9,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [],
+        "description": "ours tête à lenvers: Une bougie en forme d'ours, idéale pour apporter une touche ludique et charmante à votre décoration. Parfaite pour les chambres d'enfants ou comme cadeau original."
+    },
+    {
+        "name": "Couple marié",
+        "category": "Bougie moulée",
+        "price": 9,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/couple_marie.jpg"],
+        "description": "Couple marié: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Centre de table trio de roses",
+        "category": "Bougie moulée",
+        "price": 21,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/centre_de_table.jpg"],
+        "description": "Centre de table trio de roses: Une bougie délicate en forme de rose, parfaite pour une ambiance romantique ou pour offrir un cadeau plein de charme."
+    },
+    {
+        "name": "Lotus",
+        "category": "Bougie moulée",
+        "price": 11,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/lotus.jpg"],
+        "description": "Lotus: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Grande Rose en coeur",
+        "category": "Bougie moulée",
+        "price": 9,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [
+            "/img/produits/grand_coeur_en_rose.jpg",
+            "/img/produits/grand_coeur_en_rose2.jpg"
+        ],
+        "description": "Grande Rose en coeur: Une bougie en forme de cœur, parfaite pour exprimer vos sentiments ou décorer un moment romantique."
+    },
+    {
+        "name": "Main & rose",
+        "category": "Bougie moulée",
+        "price": 11,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [],
+        "description": "Main & rose: Une bougie délicate en forme de rose, parfaite pour une ambiance romantique ou pour offrir un cadeau plein de charme."
+    },
+    {
+        "name": "Femme secret",
+        "category": "Bougie moulée",
+        "price": 10,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/femme_secrete.jpg"],
+        "description": "Femme secret: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Anges",
+        "category": "Bougie moulée",
+        "price": 14,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/ange.jpg"],
+        "description": "Anges: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Trio père Noël",
+        "category": "Bougie moulée",
+        "price": 8.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": [],
+        "description": "Trio père Noël: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "gnôme sapin",
+        "category": "Bougie moulée",
+        "price": 8.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/gnome_sapin.jpg"],
+        "description": "gnôme sapin: Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
+    },
+    {
+        "name": "Gnôme chapeau trèfle",
+        "category": "Bougie moulée",
+        "price": 8.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/gnome_chapeau_trefle.jpg"],
+        "description": "Gnôme chapeau trèfle: Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
+    },
+    {
+        "name": "Grand sapin",
+        "category": "Bougie moulée",
+        "price": 13.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/grand_sapin.jpg"],
+        "description": "Grand sapin: Une bougie en forme de sapin, idéale pour les fêtes de fin d'année et pour créer une atmosphère chaleureuse."
+    },
+    {
+        "name": "petit sapin",
+        "category": "Bougie moulée",
+        "price": 10,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/petit_sapin.jpg"],
+        "description": "petit sapin: Une bougie en forme de sapin, idéale pour les fêtes de fin d'année et pour créer une atmosphère chaleureuse."
+    },
+    {
+        "name": "Cerf",
+        "category": "Bougie moulée",
+        "price": 8,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/cerf.jpg"],
+        "description": "Cerf: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    },
+    {
+        "name": "Chien Bichon",
+        "category": "Bougie moulée",
+        "price": 9.5,
+        "fragances": "Non spécifié",
+        "color": "Blanc de base",
+        "images": ["/img/produits/chien_bichon.jpg"],
+        "description": "Chien Bichon: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+    }
 ]

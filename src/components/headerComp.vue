@@ -7,7 +7,7 @@
       <!-- Logo avec lien vers l'accueil -->
       <router-link to="/" class="logo-link">
         <img
-          class="logo"
+          class="logo hoverable"
           :src="theme === 'dark' ? '/logos/logo_wh_big.png' : '/logos/logo_bk_big.png'"
           alt="Figuier D'Or"
         />

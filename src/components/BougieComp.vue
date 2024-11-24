@@ -1,6 +1,6 @@
 <template>
   <div class="holder button" @click="toggleTheme">
-      <div class="figue">
+      <div class="figue hoverable">
 
         <!-- Glow et flamme visibles uniquement en mode dark -->
         <div v-if="theme === 'dark'" class="blinking-glow"></div>
@@ -14,7 +14,6 @@
 
         <!-- Fumée visible uniquement en mode light -->
         <SmokeComp v-if="theme === 'light'"/>
-
       </div>
   </div>
 </template>

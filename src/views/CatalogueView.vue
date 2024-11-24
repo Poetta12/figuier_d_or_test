@@ -10,13 +10,14 @@
     <div class="products-grid">
       <ProductFrame
         v-for="product in paginatedProducts"
-        :key="product.id"
-        :image="product.image"
+        :key="product.name"
+        :images="product.images"
         :name="product.name"
         :description="product.description"
         :category="product.category"
         :color="product.color"
         :price="product.price"
+        :fragrances="product.fragrances || []"
         :buttonText="'Découvrir'"
         @actionClick="showDetails(product)"
       />
@@ -45,7 +46,7 @@ import ProductFrame from "@/components/ProductFrame.vue";
 import ProductDetails from "@/components/ProductDetails.vue";
 import PaginationComp from "@/components/PaginationComp.vue";
 import FilterComp from "@/components/FilterComp.vue";
-import productsData from "/database/bougies.json";
+import productsData from "../../database/bougies.json";
 import { ref, computed } from "vue";
 
 // Liste des produits
@@ -58,6 +59,19 @@ const isModalVisible = ref(false);
 // Pagination variables
 const currentPage = ref(1);
 const itemsPerPage = 9; // Nombre d'éléments par page
+
+const normalizedProducts = computed(() => {
+  return products.value.map((product) => {
+    return {
+      ...product,
+      images: Array.isArray(product.images)
+        ? product.images
+        : product.images
+          ? [product.images]
+          : [] // Si images est undefined, utiliser un tableau vide
+    };
+  });
+});
 
 // Filtres actifs
 const activeFilters = ref({

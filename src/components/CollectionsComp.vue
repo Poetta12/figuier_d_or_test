@@ -11,7 +11,8 @@
           <h3 class="collection-title">{{ collection.title }}</h3>
           <p class="collection-description">{{ collection.description }}</p>
         </div>
-        <button class="explore-button">Explorer la boutique</button>
+        <button class="explore-button hoverable">Explorer la boutique</button>
+
       </div>
     </div>
   </section>
