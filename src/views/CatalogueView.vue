@@ -31,12 +31,13 @@
 
     <!-- Composant ProductDetails -->
     <ProductDetails
-      v-if="selectedProduct"
+      v-if="isModalVisible && selectedProduct"
       :product="selectedProduct"
       :isVisible="isModalVisible"
       @close="closeModal"
       @addToCart="addToCart"
     />
+
   </div>
 </template>
 
@@ -59,18 +60,6 @@ const isModalVisible = ref(false);
 const currentPage = ref(1);
 const itemsPerPage = 9; // Nombre d'éléments par page
 
-const normalizedProducts = computed(() => {
-  return products.value.map((product) => {
-    return {
-      ...product,
-      images: Array.isArray(product.images)
-        ? product.images
-        : product.images
-          ? [product.images]
-          : [] // Si images est undefined, utiliser un tableau vide
-    };
-  });
-});
 
 // Filtres actifs
 const activeFilters = ref({
@@ -112,10 +101,14 @@ const goToPage = (page) => {
   }
 };
 
-// Affichage des détails
+// Exemple pour vérifier un produit avant d'ouvrir la modale
 const showDetails = (product) => {
-  selectedProduct.value = product;
-  isModalVisible.value = true;
+  if (product && typeof product === "object" && product.name) {
+    selectedProduct.value = product;
+    isModalVisible.value = true;
+  } else {
+    console.error("Produit invalide :", product);
+  }
 };
 
 // Fermeture de la modale

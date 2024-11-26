@@ -19,7 +19,7 @@
       <div class="product-meta">
         <p><strong>Catégorie :</strong> {{ category }}</p>
         <p><strong>Couleur :</strong> {{ color }}</p>
-        <p><strong>Prix :</strong> {{ price.toFixed(2) }} €</p>
+        <p><strong>Prix :</strong> {{ price.toFixed(2) }} CHF</p>
         <p v-if="Array.isArray(fragrances) && fragrances.length">
           <strong>Parfums :</strong> {{ fragrances.join(", ") }}
         </p>
