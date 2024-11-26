@@ -3,11 +3,16 @@
     <!-- Galerie d'images -->
     <div class="image-container">
       <img
-        v-for="(img, index) in (Array.isArray(images) ? images : [images])"
-        :key="index"
+        v-if="Array.isArray(images) && images.length > 0"
         class="product-image"
-        :src="img"
-        :alt="`${name || 'Image du produit'} (${index + 1})`"
+        :src="images[0]"
+        :alt="`${name || 'Image du produit'} (1)`"
+      />
+      <img
+        v-else
+        class="product-image"
+        :src="images"
+        :alt="`${name || 'Image du produit'}`"
       />
     </div>
 
