@@ -338,7 +338,6 @@ textarea:focus {
 .dropdown-item {
   padding: 0.75rem;
   color: var(--color-indigo);
-  cursor: pointer;
 }
 
 .dropdown-item:hover {

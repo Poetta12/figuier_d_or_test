@@ -85,7 +85,6 @@ const close = () => {
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 

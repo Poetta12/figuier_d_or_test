@@ -128,7 +128,6 @@ const addToCart = () => {
   border: none;
   font-size: 1.5rem;
   color: var(--text-color);
-  cursor: pointer;
 }
 
 /* Product gallery */
@@ -185,7 +184,6 @@ const addToCart = () => {
   color: var(--color-white);
   border: none;
   border-radius: 10px;
-  cursor: pointer;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 

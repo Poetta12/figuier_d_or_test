@@ -146,7 +146,6 @@ watch(() => props.images, () => {
   color: var(--color-lightgold);
   padding: 0.5rem;
   font-size: 1.5rem;
-  cursor: pointer;
   z-index: 2;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -180,7 +179,6 @@ watch(() => props.images, () => {
   height: 12px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
