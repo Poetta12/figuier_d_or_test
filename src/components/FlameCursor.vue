@@ -100,15 +100,31 @@ onMounted(() => {
     }
   });
 
+  document.body.addEventListener("mouseover", (event) => {
+    if (
+      event.target.matches("button") ||
+      event.target.matches("a") ||
+      event.target.matches(".hoverable") ||
+      event.target.matches("option") || // Ajout des options
+      event.target.matches("select")
+    ) {
+      handleHover(event);
+    }
+  });
+
   document.body.addEventListener("mouseout", (event) => {
     if (
       event.target.matches("button") ||
       event.target.matches("a") ||
-      event.target.matches(".hoverable")
+      event.target.matches(".hoverable") ||
+      event.target.matches("option") || // Ajout des options
+      event.target.matches("select")
     ) {
       handleHoverOut(event);
     }
   });
+
+
 });
 
 onBeforeUnmount(() => {
@@ -131,6 +147,11 @@ onBeforeUnmount(() => {
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 9999;
+  }
+
+  select:hover + .holder,
+  option:hover + .holder {
+    pointer-events: auto; /* Autorise les interactions pour certains éléments */
   }
 
   /* Corps de la figue */

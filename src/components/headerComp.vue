@@ -31,6 +31,9 @@
             <router-link to="/catalogue" class="nav-link" exact-active-class="active">Catalogue</router-link>
           </li>
           <li>
+            <router-link to="/form" class="nav-link" exact-active-class="active">Formulaire</router-link>
+          </li>
+          <li>
             <router-link to="/about" class="nav-link" exact-active-class="active">À propos</router-link>
           </li>
         </ul>

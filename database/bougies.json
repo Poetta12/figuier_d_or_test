@@ -4,15 +4,21 @@
         "category": "Bougie parfumée",
         "price": 42.5,
         "fragances": [
-            "Lavande",
+            "Booster your life (fruité)",
             "Monoï",
+            "Iris & Lavande",
+            "Christmas très (pin, Eucalyptus)",
+            "ylang ylang",
+            "Ambre patchouli",
+            "Sauge",
+            "Thym",
             "Figue",
-            "Sapin",
-            "Eucalyptus"
+            "Lavandin"
+
         ],
         "color": "Blanc de base",
         "images": ["/img/produits/bougie_parfumee.jpeg"],
-        "description": "Bougie parfumée 400g: Cette bougie de 42.5g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
+        "description": "Cette bougie de 42.5g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
     },
     {
         "name": "Bougie parfumée 250g",
@@ -27,7 +33,7 @@
         ],
         "color": "Blanc de base",
         "images": ["/img/produits/bougie_parfumee.jpeg"],
-        "description": "Bougie parfumée 250g: Cette bougie de 25g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
+        "description": "Cette bougie de 25g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
     },
     {
         "name": "Bougie parfumée 150g",
@@ -42,7 +48,7 @@
         ],
         "color": "Blanc de base",
         "images": ["/img/produits/bougie_parfumee.jpeg"],
-        "description": "Bougie parfumée 150g: Cette bougie de 16.5g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
+        "description": "Cette bougie de 16.5g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
     },
     {
         "name": "Bougie parfumée 50g",
@@ -57,7 +63,7 @@
         ],
         "color": "Blanc de base",
         "images": ["/img/produits/bougie_parfumee.jpeg"],
-        "description": "Bougie parfumée 50g: Cette bougie de 13.5g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
+        "description": "Cette bougie de 13.5g est parfaite pour fraganceser votre intérieur avec des fragrances envoûtantes. Fabriquée avec soin, elle est idéale pour créer une ambiance chaleureuse et relaxante."
     },
     {
         "name": "Ours",
@@ -69,7 +75,7 @@
             "/img/produits/Ours.jpg",
             "/img/produits/ours2.jpg"
         ],
-        "description": "Ours: Une bougie en forme d'ours, idéale pour apporter une touche ludique et charmante à votre décoration. Parfaite pour les chambres d'enfants ou comme cadeau original."
+        "description": "Une bougie en forme d'ours, idéale pour apporter une touche ludique et charmante à votre décoration. Parfaite pour les chambres d'enfants ou comme cadeau original."
     },
     {
         "name": "Corps de femme avec T-shirt",
@@ -81,7 +87,7 @@
             "/img/produits/corps_de_femme_avec_t-shirt.jpg",
             "/img/produits/corps_de_femme_avec_t-shirt2.jpg"
         ],
-        "description": "Corps de femme avec T-shirt: Une bougie élégante représentant un corps de femme, parfaite pour une décoration artistique et moderne. Fabriquée en cire blanche de qualité."
+        "description": "Une bougie élégante représentant un corps de femme, parfaite pour une décoration artistique et moderne. Fabriquée en cire blanche de qualité."
     },
     {
         "name": "Torse d'homme",
@@ -93,7 +99,7 @@
             "/img/produits/corps_d_homme.jpg",
             "/img/produits/corps_d_homme2.jpg"
         ],
-        "description": "Torse dhomme: Une bougie raffinée en forme de torse, parfaite pour apporter une touche de sophistication à votre espace."
+        "description": "Une bougie raffinée en forme de torse, parfaite pour apporter une touche de sophistication à votre espace."
     },
     {
         "name": "Torse de femme",
@@ -105,7 +111,7 @@
             "/img/produits/torse_de_femme.jpg",
             "/img/produits/torse_de_femme2.jpg"
         ],
-        "description": "Torse femme: Une bougie raffinée en forme de torse, parfaite pour apporter une touche de sophistication à votre espace."
+        "description": "Une bougie raffinée en forme de torse, parfaite pour apporter une touche de sophistication à votre espace."
     },
     {
         "name": "Serpent à tête de Rose",
@@ -114,7 +120,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/serpent_a_tete_de_rose.jpg"],
-        "description": "Serpent à tête de Rose: Une bougie au design unique représentant un serpent, idéale pour une décoration audacieuse et originale."
+        "description": "Une bougie au design unique représentant un serpent, idéale pour une décoration audacieuse et originale."
     },
     {
         "name": "Coeur dans les mains",
@@ -126,7 +132,7 @@
             "/img/produits/coeur_dans_les_mains.jpg",
             "/img/produits/coeur_dans_les_mains2.jpg"
         ],
-        "description": "Coeur dans les mains: Une bougie en forme de cœur, parfaite pour exprimer vos sentiments ou décorer un moment romantique."
+        "description": "Une bougie en forme de cœur, parfaite pour exprimer vos sentiments ou décorer un moment romantique."
     },
     {
         "name": "Cylindre ondulé",
@@ -138,7 +144,7 @@
             "/img/produits/cylindre_ondule.jpg",
             "/img/produits/cylindre_ondule2.jpg"
         ],
-        "description": "Cylindre ondulé: Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
+        "description": "Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
     },
     {
         "name": "Cylindre patte de chien",
@@ -150,7 +156,7 @@
             "/img/produits/cylindre_patte_de_chien.jpg",
             "/img/produits/cylindre_patte_de_chien2.jpg"
         ],
-        "description": "Cylindre patte de chien: Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
+        "description": "Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
     },
     {
         "name": "Cylindre coeur",
@@ -162,7 +168,7 @@
             "/img/produits/cylindre_coeur.jpg",
             "/img/produits/cylindre_coeur2.jpg"
         ],
-        "description": "Cylindre coeur: Une bougie en forme de cœur, parfaite pour exprimer vos sentiments ou décorer un moment romantique."
+        "description": "Une bougie en forme de cœur, parfaite pour exprimer vos sentiments ou décorer un moment romantique."
     },
     {
         "name": "Cylindre octogonal",
@@ -174,7 +180,7 @@
             "/img/produits/cylindre_octogonale.jpg",
             "/img/produits/cylindre_octogonale2.jpg"
         ],
-        "description": "Cylindre octogonal: Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
+        "description": "Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
     },
     {
         "name": "Cylindre avec des vagues",
@@ -186,7 +192,7 @@
             "/img/produits/cylindre_avec_des_vagues.jpg",
             "/img/produits/cylindre_avec_des_vagues2.jpg"
         ],
-        "description": "Cylindre avec des vagues: Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
+        "description": "Une bougie cylindrique au design épuré, parfaite pour une décoration moderne et élégante."
     },
     {
         "name": "Bougie à bulle",
@@ -195,7 +201,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/bougie_a_bulle.jpg"],
-        "description": "Bougie à bulle: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Cube de diamant",
@@ -204,7 +210,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/cube_de_diamant.jpg"],
-        "description": "Cube de diamant: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Pomme de pain",
@@ -213,7 +219,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/pomme_de_pain.jpg"],
-        "description": "Pomme de pain: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Botte de Noel",
@@ -222,7 +228,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/botte_de_noel.jpg"],
-        "description": "Botte de Noel: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Cloche de Noel",
@@ -231,7 +237,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/cloche_de_noel.jpg"],
-        "description": "Cloche de Noel: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Bonhomme de neige",
@@ -240,7 +246,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/bonhomme_de_neige.jpg"],
-        "description": "Bonhomme de neige: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Gnôme Couronne",
@@ -249,7 +255,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/gnome_couronne.jpg"],
-        "description": "Gnôme Couronne: Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
+        "description": "Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
     },
     {
         "name": "Cerf en forêt",
@@ -258,7 +264,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/cerf_en_foret.jpg"],
-        "description": "Cerf en forêt: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Gnôme trèfle",
@@ -267,7 +273,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/gnome_trèfle.jpg"],
-        "description": "Gnôme trèfle: Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
+        "description": "Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
     },
     {
         "name": "ours tête à lenvers",
@@ -276,7 +282,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": [],
-        "description": "ours tête à lenvers: Une bougie en forme d'ours, idéale pour apporter une touche ludique et charmante à votre décoration. Parfaite pour les chambres d'enfants ou comme cadeau original."
+        "description": "Une bougie en forme d'ours, idéale pour apporter une touche ludique et charmante à votre décoration. Parfaite pour les chambres d'enfants ou comme cadeau original."
     },
     {
         "name": "Couple marié",
@@ -285,7 +291,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/couple_marie.jpg"],
-        "description": "Couple marié: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Centre de table trio de roses",
@@ -294,7 +300,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/centre_de_table.jpg"],
-        "description": "Centre de table trio de roses: Une bougie délicate en forme de rose, parfaite pour une ambiance romantique ou pour offrir un cadeau plein de charme."
+        "description": "Une bougie délicate en forme de rose, parfaite pour une ambiance romantique ou pour offrir un cadeau plein de charme."
     },
     {
         "name": "Lotus",
@@ -303,7 +309,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/lotus.jpg"],
-        "description": "Lotus: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Grande Rose en coeur",
@@ -315,7 +321,7 @@
             "/img/produits/grand_coeur_en_rose.jpg",
             "/img/produits/grand_coeur_en_rose2.jpg"
         ],
-        "description": "Grande Rose en coeur: Une bougie en forme de cœur, parfaite pour exprimer vos sentiments ou décorer un moment romantique."
+        "description": "Une bougie en forme de cœur, parfaite pour exprimer vos sentiments ou décorer un moment romantique."
     },
     {
         "name": "Main & rose",
@@ -324,7 +330,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": [],
-        "description": "Main & rose: Une bougie délicate en forme de rose, parfaite pour une ambiance romantique ou pour offrir un cadeau plein de charme."
+        "description": "Une bougie délicate en forme de rose, parfaite pour une ambiance romantique ou pour offrir un cadeau plein de charme."
     },
     {
         "name": "Femme secret",
@@ -333,7 +339,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/femme_secrete.jpg"],
-        "description": "Femme secret: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Anges",
@@ -342,7 +348,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/ange.jpg"],
-        "description": "Anges: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Trio père Noël",
@@ -351,7 +357,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": [],
-        "description": "Trio père Noël: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "gnôme sapin",
@@ -360,7 +366,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/gnome_sapin.jpg"],
-        "description": "gnôme sapin: Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
+        "description": "Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
     },
     {
         "name": "Gnôme chapeau trèfle",
@@ -369,7 +375,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/gnome_chapeau_trefle.jpg"],
-        "description": "Gnôme chapeau trèfle: Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
+        "description": "Une bougie en forme de gnôme, idéale pour les périodes festives ou pour ajouter une touche de magie à votre intérieur."
     },
     {
         "name": "Grand sapin",
@@ -378,7 +384,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/grand_sapin.jpg"],
-        "description": "Grand sapin: Une bougie en forme de sapin, idéale pour les fêtes de fin d'année et pour créer une atmosphère chaleureuse."
+        "description": "Une bougie en forme de sapin, idéale pour les fêtes de fin d'année et pour créer une atmosphère chaleureuse."
     },
     {
         "name": "petit sapin",
@@ -387,7 +393,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/petit_sapin.jpg"],
-        "description": "petit sapin: Une bougie en forme de sapin, idéale pour les fêtes de fin d'année et pour créer une atmosphère chaleureuse."
+        "description": "Une bougie en forme de sapin, idéale pour les fêtes de fin d'année et pour créer une atmosphère chaleureuse."
     },
     {
         "name": "Cerf",
@@ -396,7 +402,7 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/cerf.jpg"],
-        "description": "Cerf: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     },
     {
         "name": "Chien Bichon",
@@ -405,6 +411,6 @@
         "fragances": "Non spécifié",
         "color": "Blanc de base",
         "images": ["/img/produits/chien_bichon.jpg"],
-        "description": "Chien Bichon: Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
+        "description": "Une bougie artisanale, fabriquée avec soin pour illuminer et fraganceser votre espace."
     }
 ]

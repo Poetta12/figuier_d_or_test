@@ -34,6 +34,11 @@ const router = createRouter({
       name: 'conditions-livraison',
       component: () => import('../components/ConditionsLivraisonComp.vue'),
     },
+    {
+      path: '/form', // Nouvelle route pour FormView
+      name: 'form',
+      component: () => import('../views/FormView.vue'), // Lazy-loaded
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     return new Promise((resolve) => {
