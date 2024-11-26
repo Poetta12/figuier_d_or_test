@@ -4,11 +4,17 @@
     <div class="modal-content">
       <button class="close-button" @click="closeDetails">&times;</button>
       <div class="modal-body">
-        <img class="product-image" :src="product.image" :alt="product.name" />
+        <!-- Affichage de l'image -->
+        <img
+          class="product-image"
+          :src="Array.isArray(product.images) ? product.images[0] : product.image || '/img/default-product.png'"
+          :alt="product.name || 'Produit sans nom'"
+        />
+        <!-- Détails du produit -->
         <div class="product-details">
           <h2 class="product-name">{{ product.name }}</h2>
           <p class="product-description">{{ product.description }}</p>
-          <p class="product-price" v-if="product.price">Prix : {{ product.price }} €</p>
+          <p class="product-price" v-if="product.price">Prix : {{ product.price.toFixed(2) }} €</p>
           <button class="add-to-cart-button" @click="addToCart">Ajouter au panier</button>
         </div>
       </div>

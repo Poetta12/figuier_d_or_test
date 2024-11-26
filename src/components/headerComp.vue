@@ -7,7 +7,7 @@
       <!-- Logo avec lien vers l'accueil -->
       <router-link to="/" class="logo-link">
         <img
-          class="logo"
+          class="logo hoverable"
           :src="theme === 'dark' ? '/logos/logo_wh_big.png' : '/logos/logo_bk_big.png'"
           alt="Figuier D'Or"
         />
@@ -29,6 +29,9 @@
           </li>
           <li>
             <router-link to="/catalogue" class="nav-link" exact-active-class="active">Catalogue</router-link>
+          </li>
+          <li>
+            <router-link to="/form" class="nav-link" exact-active-class="active">Formulaire</router-link>
           </li>
           <li>
             <router-link to="/about" class="nav-link" exact-active-class="active">À propos</router-link>
@@ -129,7 +132,7 @@ const updateTheme = (newTheme) => {
 
 .nav {
   position: relative;
-  border: 1px solid var(--color-lightgold);
+  border: 1px solid var(--color-footer-pg-title);
   border-radius: 10px;
   padding: 15px 0;
 }
@@ -157,7 +160,7 @@ const updateTheme = (newTheme) => {
 
 .nav-link {
   font-size: 1rem;
-  color: var(--color-lightgold);
+  color: var(--color-footer-pg-title);
   text-decoration: none;
   margin: 0.5rem 0;
   transition: color 0.3s ease;

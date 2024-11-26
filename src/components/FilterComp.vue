@@ -33,13 +33,13 @@
     </div>
 
     <!-- Plage de prix -->
-    <div>
+    <div class="hoverable">
       <h4>Prix</h4>
       <input
         type="range"
         v-model="filters.priceRange"
         :min="0"
-        :max="100"
+        :max="50"
         @input="emitFilters"
       />
       <span>{{ filters.priceRange }} €</span>
@@ -53,14 +53,14 @@ import { ref, defineEmits } from "vue";
 // Définir l'événement "filter-change"
 const emit = defineEmits(["filter-change"]);
 
-const categories = ["Bougies moulées", "Bougies parfumées", "Bougies LED"];
+const categories = ["Bougies moulées", "Bougies parfumées"];
 const colors = ["Blanc", "Rouge", "Vert", "Bleu", "Noir"];
 
 const filters = ref({
   search: "",
   category: "",
   color: "",
-  priceRange: 100,
+  priceRange: 50,
 });
 
 const emitFilters = () => {
@@ -152,7 +152,6 @@ input[type="range"]::-webkit-slider-thumb {
   height: 20px;
   background: #6b4fa7;
   border-radius: 50%;
-  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

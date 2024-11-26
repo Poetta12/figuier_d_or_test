@@ -11,7 +11,8 @@
           <h3 class="collection-title">{{ collection.title }}</h3>
           <p class="collection-description">{{ collection.description }}</p>
         </div>
-        <button class="explore-button">Explorer la boutique</button>
+        <button class="explore-button hoverable">Explorer la boutique</button>
+
       </div>
     </div>
   </section>
@@ -145,7 +146,6 @@ const collections = [
   border: none;
   border-radius: 5px;
   padding: 0.7rem 1rem;
-  cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }

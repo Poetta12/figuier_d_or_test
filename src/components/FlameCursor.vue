@@ -75,38 +75,69 @@ const updateCursor = (event) => {
 };
 
 // Activer/désactiver l'état de hover
-const handleHover = () => {
+const handleHover = (event) => {
   isHovering.value = true;
+  console.log("Hovering on:", event.target);
 };
 
 const handleHoverOut = () => {
   isHovering.value = false;
+  console.log("Hover out");
 };
 
 // Ajouter les écouteurs pour suivre les interactions
 onMounted(() => {
   window.addEventListener("mousemove", updateCursor);
 
-  // Ajouter des écouteurs pour tous les boutons et liens
-  document.querySelectorAll("button, a").forEach((el) => {
-    el.addEventListener("mouseenter", handleHover);
-    el.addEventListener("mouseleave", handleHoverOut);
+  // Ajouter les écouteurs de manière dynamique via le délégateur d'événements
+  document.body.addEventListener("mouseover", (event) => {
+    if (
+      event.target.matches("button") ||
+      event.target.matches("a") ||
+      event.target.matches(".hoverable")
+    ) {
+      handleHover(event);
+    }
   });
+
+  document.body.addEventListener("mouseover", (event) => {
+    if (
+      event.target.matches("button") ||
+      event.target.matches("a") ||
+      event.target.matches(".hoverable") ||
+      event.target.matches("option") || // Ajout des options
+      event.target.matches("select")
+    ) {
+      handleHover(event);
+    }
+  });
+
+  document.body.addEventListener("mouseout", (event) => {
+    if (
+      event.target.matches("button") ||
+      event.target.matches("a") ||
+      event.target.matches(".hoverable") ||
+      event.target.matches("option") || // Ajout des options
+      event.target.matches("select")
+    ) {
+      handleHoverOut(event);
+    }
+  });
+
+
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("mousemove", updateCursor);
 
-  // Retirer les écouteurs pour les boutons et liens
-  document.querySelectorAll("button, a").forEach((el) => {
-    el.removeEventListener("mouseenter", handleHover);
-    el.removeEventListener("mouseleave", handleHoverOut);
-  });
+  // Retirer les écouteurs d'événements globaux
+  document.body.removeEventListener("mouseover", handleHover);
+  document.body.removeEventListener("mouseout", handleHoverOut);
 });
 </script>
 
-<style scoped>
 
+<style scoped>
 @media (min-width: 1024px) {
   /* Conteneur principal */
   .holder {
@@ -116,6 +147,11 @@ onBeforeUnmount(() => {
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 9999;
+  }
+
+  select:hover + .holder,
+  option:hover + .holder {
+    pointer-events: auto; /* Autorise les interactions pour certains éléments */
   }
 
   /* Corps de la figue */
@@ -161,10 +197,8 @@ onBeforeUnmount(() => {
     border-radius: 50% 50% 20% 20%;
     background: linear-gradient(white 80%, transparent);
     animation: enlargeFlame 2s linear infinite;
-    /* Transition fluide pour les transformations */
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 0.3s ease; /* Transition fluide */
   }
-
 
   .flame:before {
     content: "";
@@ -172,17 +206,21 @@ onBeforeUnmount(() => {
     width: 100%;
     height: 100%;
     border-radius: 50% 50% 20% 20%;
-    box-shadow: 0 0 5px 0 rgba(247, 93, 0, 0.4), 0 -2px 1px 0 rgba(247, 128, 0, 0.7);
+    box-shadow: 0 0 5px 0 rgba(247, 93, 0, 0.4),
+    0 -2px 1px 0 rgba(247, 128, 0, 0.7);
+    transition: box-shadow 0.3s ease; /* Transition fluide pour l'effet lumineux */
   }
 
   /* Flamme agrandie en hover */
   .is-hovering .flame {
     height: 30px;
     width: 10px;
+    background: linear-gradient(orange 50%, red); /* Dégradé orange/rouge */
   }
 
   .is-hovering .flame:before {
-    box-shadow: 0 0 10px 0 rgba(247, 93, 0, 0.7), 0 -3px 2px 0 rgba(247, 128, 0, 0.9);
+    box-shadow: 0 0 10px 0 rgba(255, 69, 0, 0.7), /* Rouge lumineux */
+    0 -3px 2px 0 rgba(255, 140, 0, 0.9); /* Orange lumineux */
   }
 
   /* Animations */
@@ -198,6 +236,12 @@ onBeforeUnmount(() => {
     background: #ff6000;
     filter: blur(12px); /* Réduction du flou */
     animation: blinkIt 0.1s infinite;
+    transition: background 0.3s ease, filter 0.3s ease; /* Transition pour la lueur */
+  }
+
+  .is-hovering .blinking-glow {
+    background: #ff4500; /* Lueur orange/rouge */
+    filter: blur(8px); /* Flou réduit pour effet net */
   }
 }
 
@@ -207,3 +251,4 @@ onBeforeUnmount(() => {
   }
 }
 </style>
+

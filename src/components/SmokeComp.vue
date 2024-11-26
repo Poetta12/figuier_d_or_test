@@ -1,7 +1,7 @@
 <template>
   <!-- Fumée visible uniquement en mode light -->
   <svg
-    class="smoke"
+    class="smoke hoverable"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 100 200"
   >
