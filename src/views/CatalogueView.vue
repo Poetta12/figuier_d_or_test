@@ -17,10 +17,12 @@
         :category="product.category || 'Bougies Artisanales'"
         :color="product.color"
         :price="product.price"
+        :fragrances="product.fragrances"
         :buttonText="'Découvrir'"
         @actionClick="showDetails(product)"
       />
     </div>
+
 
     <!-- Pagination -->
     <PaginationComp

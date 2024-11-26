@@ -26,9 +26,10 @@
           <p class="product-price" v-if="product.price">
             Prix : {{ product.price.toFixed(2) }} CHF
           </p>
+          <strong>Parfums disponibles :</strong>
           <ul class="product-meta" v-if="product.fragrances?.length">
             <li v-for="(fragrance, index) in product.fragrances" :key="index">
-              <strong>Parfum :</strong> {{ fragrance }}
+              {{ fragrance }}
             </li>
           </ul>
           <p v-if="product.color">
@@ -37,9 +38,6 @@
           <p v-if="product.quantity">
             <strong>Quantité disponible :</strong> {{ product.quantity }}
           </p>
-          <button class="add-to-cart-button" @click="addToCart">
-            Ajouter au panier
-          </button>
         </div>
       </div>
     </div>
@@ -63,7 +61,7 @@ const props = defineProps({
 });
 
 // Events
-const emit = defineEmits(["close", "addToCart"]);
+const emit = defineEmits(["close"]);
 
 // Vérifie si le produit a plusieurs images
 const hasMultipleImages = computed(() =>
@@ -73,15 +71,12 @@ const hasMultipleImages = computed(() =>
 const closeDetails = () => {
   emit("close");
 };
-
-const addToCart = () => {
-  emit("addToCart", props.product);
-};
 </script>
 
 <style scoped>
 /* Modal container */
 .product-details-modal {
+
   position: fixed;
   top: 0;
   left: 0;
@@ -110,7 +105,7 @@ const addToCart = () => {
   flex-direction: column;
   background: var(--bg-color);
   color: var(--text-color);
-  width: 90vw;
+  width:90vw;
   max-height: 90vh;
   overflow-y: auto;
   border-radius: 10px;
@@ -177,26 +172,12 @@ const addToCart = () => {
   font-size: 1rem;
 }
 
-.add-to-cart-button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.2rem;
-  background: var(--color-indigo);
-  color: var(--color-white);
-  border: none;
-  border-radius: 10px;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.add-to-cart-button:hover {
-  transform: translateY(-3px);
-  background: var(--color-lightgold);
-}
-
 /* Desktop styles */
 @media (min-width: 768px) {
   .modal-content {
     flex-direction: row;
-    max-height: 80vh;
+    width:1000px;
+    max-height: 90vh;
   }
 
   .modal-body {
@@ -220,10 +201,6 @@ const addToCart = () => {
 
   .product-name {
     font-size: 2rem;
-  }
-
-  .add-to-cart-button {
-    align-self: flex-start;
   }
 }
 </style>
