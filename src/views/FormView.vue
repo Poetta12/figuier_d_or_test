@@ -95,7 +95,6 @@ button {
   border-radius: 8px;
   background: var(--bg-color);
   color: var(--color-button-DL);
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 
